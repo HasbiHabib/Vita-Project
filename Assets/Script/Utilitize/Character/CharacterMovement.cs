@@ -8,7 +8,7 @@ public class CharacterMovement : MonoBehaviour
     public CharacterController2D controller;
     public float normalrun;
     public float lari;
-    float horizontalmove;
+    public float horizontalmove;
 
     [Header("condition_thing")]
     public bool onEvent;
@@ -23,10 +23,16 @@ public class CharacterMovement : MonoBehaviour
     [Header("other component")]
     //public Animator character;
     public Rigidbody2D rigid;
+    public Transform LastCheckPoint;
 
     void Awake()
     {
         //on_cooldown = false;
+        Physics2D.IgnoreLayerCollision(8, 0);
+        Physics2D.IgnoreLayerCollision(3, 7);
+        Physics2D.IgnoreLayerCollision(3, 8);
+        Physics2D.IgnoreLayerCollision(7, 0);
+        Physics2D.IgnoreLayerCollision(7, 6);
     }
 
     void Update()
@@ -119,5 +125,18 @@ public class CharacterMovement : MonoBehaviour
     public void AfterEvent()
     {
         onEvent = false;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Fall")
+        {
+            Respawn();
+        }
+    }
+
+    public void Respawn()
+    {
+        this.transform.position = LastCheckPoint.transform.position;
     }
 }

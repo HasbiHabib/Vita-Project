@@ -3,17 +3,19 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - WaterLiquids
+  - Fall
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - Ground
-  - 
-  - 
+  - Buket
+  - waters
   - 
   - 
   - 
@@ -40,4 +42,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Latar
+    uniqueID: 1024644675
+    locked: 0
+  - name: Enemy
+    uniqueID: 4157172181
+    locked: 0
+  - name: Item
+    uniqueID: 2703093783
+    locked: 0
+  - name: Character
+    uniqueID: 2767513935
+    locked: 0
+  - name: ForeGround
+    uniqueID: 1951314645
     locked: 0
