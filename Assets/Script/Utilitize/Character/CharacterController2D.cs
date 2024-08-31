@@ -12,6 +12,8 @@ public class CharacterController2D: MonoBehaviour
     [SerializeField] public LayerMask m_WhatIsGround;                           // A mask determining what is ground to the character
     [SerializeField] public Transform m_GroundCheck;                            // A position marking where to check if the player is grounded.
 
+    public GameObject CharacterVisual;
+
 
     private bool firstland = true;
 
@@ -26,6 +28,8 @@ public class CharacterController2D: MonoBehaviour
     [Space]
     public UnityEvent OnLandEvent;
 
+    public BalancingTorso Balance;
+    public CharacterMovement movement;
 
     private bool m_wasspeedup = false;
 
@@ -37,6 +41,8 @@ public class CharacterController2D: MonoBehaviour
     private void Awake()
     {
         m_Rigidbody = GetComponent<Rigidbody2D>();
+        Balance = GetComponent<BalancingTorso>();
+        movement = GetComponent<CharacterMovement>();
 
         if (OnLandEvent == null)
             OnLandEvent = new UnityEvent();
@@ -83,7 +89,7 @@ public class CharacterController2D: MonoBehaviour
                 }
                 if (onDash == true)
                 {
-                    //player.Play("land");
+                    
                     onDash = false;
 
                 }
@@ -154,10 +160,9 @@ public class CharacterController2D: MonoBehaviour
     {
         // Switch the way the player is labelled as facing.
         m_FacingRight = !m_FacingRight;
-
         // Multiply the player's x local scale by -1.
-        Vector3 theScale = transform.localScale;
+        Vector3 theScale = CharacterVisual.transform.localScale;
         theScale.x *= -1;
-        transform.localScale = theScale;
+        CharacterVisual.transform.localScale = theScale;
     }
 }

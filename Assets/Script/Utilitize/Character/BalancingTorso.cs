@@ -9,10 +9,15 @@ public class BalancingTorso : MonoBehaviour
     public float TorsoSensitivity;
     public float WeightSensitivity;
     public float ControlSensitivity;
-    public Transform TorsoVisual;
+    public Transform TorsoEmber;
+    public Transform TorsoVisualCharacter;
+    public Transform TorsoEmberAnchor;
+    public float KecepatanBucket;
 
     public float MaxLean;
+    public float MaxLeanCharacter;
 
+    public float CurrentTorsoRotation;
 
     private void Start()
     {
@@ -39,9 +44,25 @@ public class BalancingTorso : MonoBehaviour
 
     public void Update()
     {
+        CurrentTorsoRotation = TorsoEmber.localRotation.z;
         if (TorsoRotation <= MaxLean && TorsoRotation >= -MaxLean)
         {
-            TorsoVisual.transform.rotation = Quaternion.Euler(0, 0, TorsoRotation);
+            TorsoEmberAnchor.transform.rotation = Quaternion.Euler(0, 0, TorsoRotation);
+            TorsoEmber.transform.rotation = Quaternion.RotateTowards(TorsoEmber.transform.rotation, TorsoEmberAnchor.transform.rotation, KecepatanBucket * Time.deltaTime);
+        }
+
+
+        if(TorsoRotation <= MaxLeanCharacter && TorsoRotation >= -MaxLeanCharacter)
+        {
+            TorsoVisualCharacter.transform.rotation = Quaternion.Euler(0, 0, TorsoRotation);
+        }
+        else if (TorsoRotation <= -MaxLeanCharacter)
+        {
+            TorsoVisualCharacter.transform.rotation = Quaternion.Euler(0, 0, -MaxLeanCharacter);
+        }
+        else if (TorsoRotation >= MaxLeanCharacter)
+        {
+            TorsoVisualCharacter.transform.rotation = Quaternion.Euler(0, 0, MaxLeanCharacter);
         }
 
         if (TorsoRotation <= MaxLean && TorsoRotation >= -MaxLean)
@@ -58,7 +79,7 @@ public class BalancingTorso : MonoBehaviour
 
             TorsoRotation += _RB2D.velocity.x * TorsoSensitivity;
         }
-
-        
     }
+
+
 }

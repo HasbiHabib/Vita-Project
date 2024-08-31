@@ -21,7 +21,8 @@ public class CharacterMovement : MonoBehaviour
 
 
     [Header("other component")]
-    //public Animator character;
+    public Animator characterLeg;
+    public Animator characterUpper;
     public Rigidbody2D rigid;
     public Transform LastCheckPoint;
 
@@ -44,12 +45,14 @@ public class CharacterMovement : MonoBehaviour
                 if (Input.GetKey(KeyCode.LeftShift))
                 {
                     horizontalmove = Input.GetAxis("Horizontal") * lari;
-                    //character.SetFloat("jalan", Mathf.Abs(horizontalmove));
+                    characterLeg.SetFloat("jalan", Mathf.Abs(horizontalmove));
+                    characterUpper.SetFloat("jalan", Mathf.Abs(horizontalmove));
                 }
                 else
                 {
                     horizontalmove = Input.GetAxis("Horizontal") * normalrun;
-                    //character.SetFloat("jalan", Mathf.Abs(horizontalmove));
+                    characterLeg.SetFloat("jalan", Mathf.Abs(horizontalmove));
+                    characterUpper.SetFloat("jalan", Mathf.Abs(horizontalmove));
                 }
                 if (controller.m_midair == false)
                 {
@@ -58,6 +61,8 @@ public class CharacterMovement : MonoBehaviour
                         jump = true; 
                         controller.UpdateJumpForce(JumpForceSend);
                         JumpForceSend = JumpStarted;
+                        characterLeg.SetBool("nahanLompat", false);
+                        characterUpper.SetBool("nahanLompat", false);
                     }
                     if (JumpForceSend <= JumpMax)
                     {
@@ -65,12 +70,16 @@ public class CharacterMovement : MonoBehaviour
                         {
                             horizontalmove = 0;
                             JumpForceSend += JumpAdder;
+                            characterLeg.SetBool("nahanLompat", true);
+                            characterUpper.SetBool("nahanLompat", true);
                         }
                     }
                     else
                     {
                         jump = true;
                         controller.UpdateJumpForce(JumpForceSend);
+                        characterLeg.SetBool("nahanLompat", false);
+                        characterUpper.SetBool("nahanLompat", false);
                         JumpForceSend = JumpStarted;
                     }
 
@@ -80,7 +89,8 @@ public class CharacterMovement : MonoBehaviour
         else
         {
             horizontalmove = 0;
-            //character.SetFloat("jalan", 0);
+            characterLeg.SetFloat("jalan", 0);
+            characterUpper.SetFloat("jalan", 0);
         }
 
 
@@ -88,27 +98,23 @@ public class CharacterMovement : MonoBehaviour
 
         if (rigid.velocity.y <= -1)
         {
-            //character.SetBool("fall", true);
+            characterLeg.SetBool("fall", true);
+            characterUpper.SetBool("fall", true);
         }
         else
         {
-            //character.SetBool("fall", false);
+            characterLeg.SetBool("fall", false);
+            characterUpper.SetBool("fall", false);
         }
         if (rigid.velocity.y >= 1)
         {
-            //character.SetBool("jump", true);
+            characterLeg.SetBool("jump", true);
+            characterUpper.SetBool("jump", true);
         }
         else
         {
-            //character.SetBool("jump", false);
-        }
-
-        if (controller.m_midair == true)
-        {
-            if (Input.GetButtonDown("Jump"))
-            {
-                //slam = true;
-            }
+            characterLeg.SetBool("jump", false);
+            characterUpper.SetBool("jump", false);
         }
 
     }
