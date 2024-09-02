@@ -7,7 +7,6 @@ public class CharacterMovement : MonoBehaviour
     [Header("movement setting")]
     public CharacterController2D controller;
     public float normalrun;
-    public float lari;
     public float horizontalmove;
 
     [Header("condition_thing")]
@@ -52,18 +51,9 @@ public class CharacterMovement : MonoBehaviour
         {
             if (controller.m_Grounded)
             {
-                if (Input.GetKey(KeyCode.LeftShift))
-                {
-                    horizontalmove = Input.GetAxis("Horizontal") * lari;
-                    characterLeg.SetFloat("jalan", Mathf.Abs(horizontalmove));
-                    characterUpper.SetFloat("jalan", Mathf.Abs(horizontalmove));
-                }
-                else
-                {
-                    horizontalmove = Input.GetAxis("Horizontal") * normalrun;
-                    characterLeg.SetFloat("jalan", Mathf.Abs(horizontalmove));
-                    characterUpper.SetFloat("jalan", Mathf.Abs(horizontalmove));
-                }
+                horizontalmove = Input.GetAxis("Horizontal") * normalrun;
+                characterLeg.SetFloat("jalan", Mathf.Abs(horizontalmove));
+                characterUpper.SetFloat("jalan", Mathf.Abs(horizontalmove));               
                 if (controller.m_midair == false)
                 {
                     if (Input.GetButtonUp("Jump"))
