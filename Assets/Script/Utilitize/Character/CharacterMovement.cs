@@ -23,8 +23,14 @@ public class CharacterMovement : MonoBehaviour
     [Header("other component")]
     public Animator characterLeg;
     public Animator characterUpper;
+    public Animator PlayerColor;
+    private bool OnRespawn;
     public Rigidbody2D rigid;
     public Transform LastCheckPoint;
+
+    [Header("Ember component")]
+    public GameObject EmberTorso;
+    public GameObject EmberTossing;
 
     void Awake()
     {
@@ -34,11 +40,15 @@ public class CharacterMovement : MonoBehaviour
         Physics2D.IgnoreLayerCollision(3, 8);
         Physics2D.IgnoreLayerCollision(7, 0);
         Physics2D.IgnoreLayerCollision(7, 6);
+        Physics2D.IgnoreLayerCollision(9, 7);
+        Physics2D.IgnoreLayerCollision(9, 8);
+        Physics2D.IgnoreLayerCollision(9, 3);
+        Physics2D.IgnoreLayerCollision(9, 9);
     }
 
     void Update()
     {
-        if (onEvent == false)
+        if (onEvent == false && OnRespawn == false)
         {
             if (controller.m_Grounded)
             {
@@ -91,6 +101,9 @@ public class CharacterMovement : MonoBehaviour
             horizontalmove = 0;
             characterLeg.SetFloat("jalan", 0);
             characterUpper.SetFloat("jalan", 0);
+            characterLeg.SetBool("nahanLompat", false);
+            characterUpper.SetBool("nahanLompat", false);
+            JumpForceSend = JumpStarted;
         }
 
 
@@ -135,14 +148,28 @@ public class CharacterMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Fall")
-        {
-            Respawn();
+        if (collision.tag == "Fall" && OnRespawn == false)
+        {        
+            StartCoroutine(Respawn());
         }
     }
 
-    public void Respawn()
+    public IEnumerator Respawn()
     {
+        PlayerColor.SetBool("lose", true);
+        OnRespawn = true;
+        var b = Instantiate(EmberTossing, EmberTorso.transform.position, EmberTorso.transform.rotation);
+        Destroy(b.gameObject, 3);
+        EmberTorso.SetActive(false);
+        yield return new WaitForSeconds(1f);
+        characterLeg.SetBool("nahanLompat", false);
+        characterUpper.SetBool("nahanLompat", false);
+        characterLeg.SetTrigger("respawn");
+        characterUpper.SetTrigger("respawn");
+        EmberTorso.SetActive(true);
+        JumpForceSend = JumpStarted;     
         this.transform.position = LastCheckPoint.transform.position;
+        PlayerColor.SetBool("lose", false);
+        OnRespawn = false;
     }
 }

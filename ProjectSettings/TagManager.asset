@@ -6,6 +6,7 @@ TagManager:
   tags:
   - WaterLiquids
   - Fall
+  - ground
   layers:
   - Default
   - TransparentFX
@@ -16,7 +17,7 @@ TagManager:
   - Ground
   - Buket
   - waters
-  - 
+  - BuketDrop
   - 
   - 
   - 
@@ -54,6 +55,9 @@ TagManager:
     locked: 0
   - name: Character
     uniqueID: 2767513935
+    locked: 0
+  - name: trap
+    uniqueID: 3799729945
     locked: 0
   - name: ForeGround
     uniqueID: 1951314645
