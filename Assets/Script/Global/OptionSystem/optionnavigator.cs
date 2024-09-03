@@ -47,13 +47,13 @@ namespace Global.Option
             StartCoroutine(tunggu4());
             options.SetActive(false);
             _GM.resume();
-            FindObjectOfType<savedata>().Saveoptions();
+            FindObjectOfType<savedata>().SAVEGAME();
         }
 
         public void unpause() 
         {
             _GM.resume();
-            FindObjectOfType<savedata>().Saveoptions();
+            FindObjectOfType<savedata>().SAVEGAME();
         }
 
         IEnumerator tunggu3()

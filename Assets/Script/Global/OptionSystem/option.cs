@@ -20,6 +20,14 @@ namespace Global.Option
             SFX_(sfx.value);
         }
 
+        public void NullLoad()
+        {
+            BGM_(1);
+            SFX_(1);
+            BGM.value = 1f;
+            sfx.value = 1f;
+        }
+
         public void LoadSetting(float sfxs, float bgm)
         {
             BGM.value = bgm;

@@ -6,16 +6,21 @@ using System.Collections.Generic;
 using UnityEngine.Audio;
 using UnityEngine.Events;
 using Global.Option;
+using UnityEngine.SocialPlatforms;
 
 [System.Serializable]
 public class saveproggres
 {
     public float sfx;
     public float BGM;
+
+    public int LevelSaved;
+
     public saveproggres(savedata player)
     {
         sfx = player.sfx;
         BGM = player.BGM;
+        LevelSaved = player.LevelSaved;
     }
 }
 
@@ -27,13 +32,17 @@ public class savedata : MonoBehaviour
     public float sfx;
     public float BGM;
 
+    [Header("Save Data Player")]
+    public int LevelSaved;
+
+
     void Start()
     {
         if (canLoad == true)
         {
-            LoadOptions();
+            LOADGAME();
         }
-        Saveoptions();
+        SAVEGAME();
     }
     public void Saveoptionssetting(float SFX, float bgm)
     {
@@ -42,15 +51,34 @@ public class savedata : MonoBehaviour
         SaveSystem.saveoption(this);
     }
 
-    public void Saveoptions()
+
+    public void ModifyLevelSaved(int UpdateTo)
+    {
+        if(LevelSaved <= UpdateTo)
+        {
+            LevelSaved = UpdateTo;
+        }
+        SAVEGAME();
+    }
+
+
+    public void SAVEGAME()
     {
         SaveSystem.saveoption(this);
     }
-    public void LoadOptions()
+    public void LOADGAME()
     {
         saveproggres data2 = SaveSystem.Loadoption();
-        sfx = data2.sfx;
-        BGM = data2.BGM;
-        FindObjectOfType<option>().LoadSetting(sfx, BGM);
+        if (data2 == null)
+        {
+            FindObjectOfType<option>().NullLoad();
+        }
+        else
+        {
+            sfx = data2.sfx;
+            BGM = data2.BGM;
+            FindObjectOfType<option>().LoadSetting(sfx, BGM);
+            LevelSaved = data2.LevelSaved;
+        }
     }
 }

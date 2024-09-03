@@ -6,6 +6,7 @@ public class gamemaster : MonoBehaviour
 {
 	public bool paused = false;
     public bool Canpause = false;
+    public bool PlayerMovement = true;
     
      public void resume()
      {
@@ -22,6 +23,11 @@ public class gamemaster : MonoBehaviour
     public void SetCanPause(bool Fill)
     {
         Canpause = Fill;
+    }
+
+    public void SetPlayerMove(bool fill)
+    {
+        PlayerMovement = fill;
     }
 
 }

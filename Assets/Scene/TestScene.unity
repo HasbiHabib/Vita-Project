@@ -12580,7 +12580,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 2094273135}
   normalrun: 20
-  lari: 30
   horizontalmove: 0
   onEvent: 0
   JumpStarted: 250
@@ -13360,7 +13359,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1527453361
   m_SortingLayer: 4
-  m_SortingOrder: 11
+  m_SortingOrder: -2
   m_Sprite: {fileID: -9093089639497682919, guid: 1f7937982049f8f4f894e3012b21174a,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -13994,7 +13993,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1527453361
   m_SortingLayer: 4
-  m_SortingOrder: 12
+  m_SortingOrder: -1
   m_Sprite: {fileID: 3743737866725192961, guid: 1f7937982049f8f4f894e3012b21174a,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

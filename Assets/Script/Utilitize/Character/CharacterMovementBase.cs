@@ -8,8 +8,7 @@ public class CharacterMovementBase : MonoBehaviour
     public CharacterController2D controller;
     public float normalrun;
     public float horizontalmove;
-    public bool onEvent;
-
+    public gamemaster _GM;
 
     [Header("other component")]
     public Animator CharacterAnim;
@@ -27,11 +26,13 @@ public class CharacterMovementBase : MonoBehaviour
         Physics2D.IgnoreLayerCollision(9, 8);
         Physics2D.IgnoreLayerCollision(9, 3);
         Physics2D.IgnoreLayerCollision(9, 9);
+
+        _GM = FindObjectOfType<gamemaster>().GetComponent<gamemaster>();
     }
 
     void Update()
     {
-        if (onEvent == false)
+        if (_GM.PlayerMovement == true)
         {
             if (controller.m_Grounded)
             {
@@ -42,6 +43,7 @@ public class CharacterMovementBase : MonoBehaviour
         else
         {
             horizontalmove = 0;
+            CharacterAnim.SetFloat("jalan",0);
         }
 
     }
@@ -51,11 +53,5 @@ public class CharacterMovementBase : MonoBehaviour
         controller.Move(horizontalmove * Time.fixedDeltaTime, false, false);
         //slam = false;
         //dash = false;
-    }
-
-
-    public void AfterEvent()
-    {
-        onEvent = false;
     }
 }
