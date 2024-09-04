@@ -27,14 +27,14 @@ public class CharacterController2D: MonoBehaviour
     [Header("Events")]
     [Space]
     public UnityEvent OnLandEvent;
+    public UnityEvent OnJumpEvent;
 
     public BalancingTorso Balance;
     public CharacterMovement movement;
 
     private bool m_wasspeedup = false;
 
-    //public GameObject dust;
-    //public Animator player;
+    public GameObject dust;
 
     public bool onDash = false;
 
@@ -84,7 +84,7 @@ public class CharacterController2D: MonoBehaviour
                 m_Grounded = true;
                 if (!wasGrounded)
                 {
-                    //Instantiate(dust, m_GroundCheck.position, m_GroundCheck.rotation);
+                    Instantiate(dust, m_GroundCheck.position, m_GroundCheck.rotation);
                     OnLandEvent.Invoke();
                 }
                 if (onDash == true)
@@ -150,6 +150,7 @@ public class CharacterController2D: MonoBehaviour
             // Add a vertical force to the player.
             m_Grounded = false;
             m_Rigidbody.AddForce(new Vector2(0f, JumpForce));
+            OnJumpEvent.Invoke();
             //Instantiate(dust, m_GroundCheck.position, m_GroundCheck.rotation);
         }
     }
