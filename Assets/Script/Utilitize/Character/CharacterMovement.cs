@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class CharacterMovement : MonoBehaviour
 {
@@ -30,6 +31,9 @@ public class CharacterMovement : MonoBehaviour
     [Header("Ember component")]
     public GameObject EmberTorso;
     public GameObject EmberTossing;
+
+    public UnityEvent GotHitEvent;
+    public UnityEvent AfterHitEvent;
 
     void Awake()
     {
@@ -140,12 +144,13 @@ public class CharacterMovement : MonoBehaviour
     {
         if (collision.tag == "Fall" && OnRespawn == false)
         {        
-            StartCoroutine(Respawn());
+            StartCoroutine(Respawn());     
         }
     }
 
     public IEnumerator Respawn()
     {
+        GotHitEvent.Invoke();
         PlayerColor.SetBool("lose", true);
         OnRespawn = true;
         var b = Instantiate(EmberTossing, EmberTorso.transform.position, EmberTorso.transform.rotation);
@@ -160,6 +165,7 @@ public class CharacterMovement : MonoBehaviour
         JumpForceSend = JumpStarted;     
         this.transform.position = LastCheckPoint.transform.position;
         PlayerColor.SetBool("lose", false);
+        AfterHitEvent.Invoke();
         OnRespawn = false;
     }
 }

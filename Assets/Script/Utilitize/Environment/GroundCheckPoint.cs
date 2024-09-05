@@ -6,7 +6,7 @@ public class GroundCheckPoint : MonoBehaviour
 {
     public CharacterMovement player;
     public Transform CheckPoint;
-    public float WaterLiquids = 2;
+    public GameObject WaterDrop;
 
     void Start()
     {
@@ -17,7 +17,8 @@ public class GroundCheckPoint : MonoBehaviour
     {
         if (collision.gameObject.tag == "WaterLiquids")
         {
-            Destroy(collision.gameObject, WaterLiquids);
+            Instantiate(WaterDrop,collision.gameObject.transform.position,Quaternion.identity);
+            Destroy(collision.gameObject);
         }
 
         if (collision.gameObject.tag == "Player")
