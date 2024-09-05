@@ -45,13 +45,13 @@ MonoBehaviour:
     m_Value: 0
   type:
     m_OverrideState: 0
-    m_Value: 1
+    m_Value: 0
   sphericalMode:
     m_OverrideState: 0
     m_Value: 1
   seaLevel:
     m_OverrideState: 0
-    m_Value: 0
+    m_Value: -7.38
   planetaryRadius:
     m_OverrideState: 0
     m_Value: 6378100
