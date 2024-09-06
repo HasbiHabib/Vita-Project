@@ -62,32 +62,15 @@ public class CharacterMovement : MonoBehaviour
                 characterLeg.SetFloat("jalan", Mathf.Abs(horizontalmove));
                 characterUpper.SetFloat("jalan", Mathf.Abs(horizontalmove));               
                 if (controller.m_midair == false)
-                {
+                {             
+
+                    if (Input.GetButton("Jump"))
+                    {
+                        JumOnhold();
+                    }
                     if (Input.GetButtonUp("Jump"))
                     {
-                        jump = true; 
-                        controller.UpdateJumpForce(JumpForceSend);
-                        JumpForceSend = JumpStarted;
-                        characterLeg.SetBool("nahanLompat", false);
-                        characterUpper.SetBool("nahanLompat", false);
-                    }
-                    if (JumpForceSend <= JumpMax)
-                    {
-                        if (Input.GetButton("Jump"))
-                        {
-                            horizontalmove = 0;
-                            JumpForceSend += JumpAdder;
-                            characterLeg.SetBool("nahanLompat", true);
-                            characterUpper.SetBool("nahanLompat", true);
-                        }
-                    }
-                    else
-                    {
-                        jump = true;
-                        controller.UpdateJumpForce(JumpForceSend);
-                        characterLeg.SetBool("nahanLompat", false);
-                        characterUpper.SetBool("nahanLompat", false);
-                        JumpForceSend = JumpStarted;
+                        Jumping();
                     }
 
                 }
@@ -149,6 +132,26 @@ public class CharacterMovement : MonoBehaviour
         {        
             StartCoroutine(Respawn());     
         }
+    }
+
+    public void Jumping()
+    {
+        jump = true;
+        controller.UpdateJumpForce(JumpForceSend);
+        characterLeg.SetBool("nahanLompat", false);
+        characterUpper.SetBool("nahanLompat", false);
+        JumpForceSend = JumpStarted;
+    }
+
+    public void JumOnhold()
+    {
+        horizontalmove = 0;
+        if (JumpForceSend <= JumpMax)
+        {
+            JumpForceSend += JumpAdder;
+        }
+        characterLeg.SetBool("nahanLompat", true);
+        characterUpper.SetBool("nahanLompat", true);
     }
 
     public IEnumerator Respawn()
