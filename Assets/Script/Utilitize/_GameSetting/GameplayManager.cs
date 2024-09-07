@@ -10,6 +10,7 @@ public class GameplayManager : MonoBehaviour
     public UnityEvent LoseCondition;
     public Slider Progression;
     public Slider WaterContainer;
+    private bool First = true;
 
     public int MaxCapacity;
     public int WaterContent;
@@ -26,16 +27,20 @@ public class GameplayManager : MonoBehaviour
 
     public void AddContent()
     {
-        if(WaterContent <= MaxCapacity)
+        if (First) 
         {
-            WaterContent++;
-            Progression.value = WaterContent;
-            WaterContainer.value = WaterContent;
-        }
-        if(WaterContent >= MaxCapacity)
-        {
-            WinCondition.Invoke();
-            return;
+            if (WaterContent <= MaxCapacity)
+            {
+                WaterContent++;
+                Progression.value = WaterContent;
+                WaterContainer.value = WaterContent;
+            }
+            if (WaterContent >= MaxCapacity)
+            {
+                WinCondition.Invoke();
+                First = false;
+                return;
+            } 
         }
     }
 }

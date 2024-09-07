@@ -24597,7 +24597,7 @@ MonoBehaviour:
   dialogueTrigger: {fileID: 0}
   _GM: {fileID: 0}
   ondialogue: 0
-  nextKeyButton: 101
+  nextKeyButton: 32
   nextKeyButton2: 32
   TextUp: 0
 --- !u!1 &1187813731
@@ -52442,7 +52442,7 @@ MonoBehaviour:
   SlideShowTrigger: {fileID: 0}
   _GM: {fileID: 0}
   TheSlideShowBar: {fileID: 8088131788253628559}
-  nextKeyButton: 101
+  nextKeyButton: 32
   nextKeyButton2: 32
   TextUp: 0
   OnSlideShow: 0
