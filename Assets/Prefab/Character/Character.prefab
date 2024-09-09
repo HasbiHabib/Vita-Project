@@ -1906,7 +1906,7 @@ Transform:
   m_GameObject: {fileID: 6243804957237797043}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 1.65, y: 3.09, z: 0}
-  m_LocalScale: {x: 4.5039053, y: 3.370978, z: 5.6191134}
+  m_LocalScale: {x: 7.330556, y: 5.4866037, z: 9.145669}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6243804958233989434}
@@ -2954,6 +2954,7 @@ MonoBehaviour:
   MaxLean: 95
   MaxLeanCharacter: 29.35
   CurrentTorsoRotation: 0
+  gm: {fileID: 0}
 --- !u!50 &6243804958338597757
 Rigidbody2D:
   serializedVersion: 4
