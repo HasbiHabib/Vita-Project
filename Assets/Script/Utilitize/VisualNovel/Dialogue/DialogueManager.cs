@@ -77,7 +77,6 @@ public class DialogueManager : MonoBehaviour
         {
             NameChar.Enqueue(namas);
         }
-
         DisplayNextSentence();
     }
 
@@ -91,7 +90,7 @@ public class DialogueManager : MonoBehaviour
         }
         sentence = sentences.Dequeue();
 
-        FindObjectOfType<AudioManager>().SetCurrentSoundFXClip("buttonNext");
+        FindObjectOfType<AudioManager>().SetCurrentSoundFXClip("button1");
         dialogtext.text = sentence;
         // Set the Character Sprite, Name, and Sound
         Sprite wajahi = SpriteChar.Dequeue();

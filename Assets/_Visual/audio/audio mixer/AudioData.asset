@@ -30,9 +30,135 @@ MonoBehaviour:
   - BgmName: Ending
     Clip: {fileID: 8300000, guid: 47dcebdde2990f14db6a57e88211282c, type: 3}
   SoundList:
-  - SoundName: button1
-    Clip: {fileID: 8300000, guid: 7ff5dd6af20b92747b33ad4d71805d21, type: 3}
+  - SoundName: jumping
+    Clip: {fileID: 8300000, guid: 71ed6905db9d9824d8e3fc3a144a3ff1, type: 3}
+    Output: {fileID: 24300002, guid: 9a7070e95b37aee4991563d85bbf3ad3, type: 2}
+    Volume: 0.315
+    pitch: 1
+    isLoop: 0
+  - SoundName: charge
+    Clip: {fileID: 8300000, guid: 552fc55b845e9054aa311cf51a5d91d9, type: 3}
+    Output: {fileID: 24300002, guid: 9a7070e95b37aee4991563d85bbf3ad3, type: 2}
+    Volume: 0.375
+    pitch: 1
+    isLoop: 0
+  - SoundName: land
+    Clip: {fileID: 8300000, guid: 302f331c0cca3f44ca2cc1ee15781ba6, type: 3}
+    Output: {fileID: 24300002, guid: 9a7070e95b37aee4991563d85bbf3ad3, type: 2}
+    Volume: 0.163
+    pitch: 1
+    isLoop: 0
+  - SoundName: footstep1
+    Clip: {fileID: 8300000, guid: 3cfb7ad80f59cea4a83125370c4db400, type: 3}
+    Output: {fileID: 24300002, guid: 9a7070e95b37aee4991563d85bbf3ad3, type: 2}
+    Volume: 0.3
+    pitch: 1
+    isLoop: 0
+  - SoundName: footstep2
+    Clip: {fileID: 8300000, guid: 9fa7f41d1727df14195cc46dbd5b546a, type: 3}
+    Output: {fileID: 24300002, guid: 9a7070e95b37aee4991563d85bbf3ad3, type: 2}
+    Volume: 0.3
+    pitch: 1
+    isLoop: 0
+  - SoundName: watersplash1
+    Clip: {fileID: 8300000, guid: a565dda36d352fd43bc9f3724f1d1461, type: 3}
     Output: {fileID: 24300002, guid: 9a7070e95b37aee4991563d85bbf3ad3, type: 2}
     Volume: 1
+    pitch: 1
+    isLoop: 0
+  - SoundName: watersplash2
+    Clip: {fileID: 8300000, guid: 9714cf3cb92bd2e46b0ca0944ea8dd4a, type: 3}
+    Output: {fileID: 24300002, guid: 9a7070e95b37aee4991563d85bbf3ad3, type: 2}
+    Volume: 1
+    pitch: 1
+    isLoop: 0
+  - SoundName: watershower
+    Clip: {fileID: 8300000, guid: 5743a840c5f7b434dbe0e5e9baec0581, type: 3}
+    Output: {fileID: 24300002, guid: 9a7070e95b37aee4991563d85bbf3ad3, type: 2}
+    Volume: 0.7
+    pitch: 1
+    isLoop: 0
+  - SoundName: respawn
+    Clip: {fileID: 8300000, guid: b9d22b43ae3c3bd4d9d46b0f8e2ad2f2, type: 3}
+    Output: {fileID: 24300002, guid: 9a7070e95b37aee4991563d85bbf3ad3, type: 2}
+    Volume: 0.6
+    pitch: 1
+    isLoop: 0
+  - SoundName: dead
+    Clip: {fileID: 8300000, guid: 632fc673e7044fc40ace89f310341482, type: 3}
+    Output: {fileID: 24300002, guid: 9a7070e95b37aee4991563d85bbf3ad3, type: 2}
+    Volume: 0.6
+    pitch: 1
+    isLoop: 0
+  - SoundName: fireblast
+    Clip: {fileID: 8300000, guid: 359b4480bfc8cb04cab0b95e7d181a42, type: 3}
+    Output: {fileID: 24300002, guid: 9a7070e95b37aee4991563d85bbf3ad3, type: 2}
+    Volume: 0.6
+    pitch: 1
+    isLoop: 0
+  - SoundName: treegrowing
+    Clip: {fileID: 8300000, guid: a025d82854837a7429eaed872bfccaad, type: 3}
+    Output: {fileID: 24300002, guid: 9a7070e95b37aee4991563d85bbf3ad3, type: 2}
+    Volume: 0.6
+    pitch: 1
+    isLoop: 0
+  - SoundName: komputerTouch1
+    Clip: {fileID: 8300000, guid: 289a30b50ff62a04b8ea91e5938b382b, type: 3}
+    Output: {fileID: 24300002, guid: 9a7070e95b37aee4991563d85bbf3ad3, type: 2}
+    Volume: 0.6
+    pitch: 1
+    isLoop: 0
+  - SoundName: komputerTouch2
+    Clip: {fileID: 8300000, guid: 0afc899c3759a9a40bbd96cd34b0ccdf, type: 3}
+    Output: {fileID: 24300002, guid: 9a7070e95b37aee4991563d85bbf3ad3, type: 2}
+    Volume: 0.4
+    pitch: 1
+    isLoop: 0
+  - SoundName: komputerOpen
+    Clip: {fileID: 8300000, guid: 755998195520a6647b858ffe7e69c7d3, type: 3}
+    Output: {fileID: 24300002, guid: 9a7070e95b37aee4991563d85bbf3ad3, type: 2}
+    Volume: 0.6
+    pitch: 1
+    isLoop: 0
+  - SoundName: button1
+    Clip: {fileID: 8300000, guid: 54f02efd5cb0ba044b0d0f5874871c9a, type: 3}
+    Output: {fileID: 24300002, guid: 9a7070e95b37aee4991563d85bbf3ad3, type: 2}
+    Volume: 0.6
+    pitch: 1
+    isLoop: 0
+  - SoundName: button2
+    Clip: {fileID: 8300000, guid: c1c383007733d9e49836b34b2005baac, type: 3}
+    Output: {fileID: 24300002, guid: 9a7070e95b37aee4991563d85bbf3ad3, type: 2}
+    Volume: 0.6
+    pitch: 1
+    isLoop: 0
+  - SoundName: button3
+    Clip: {fileID: 8300000, guid: 8f5b74f10de9df34e9d63f395041b0bc, type: 3}
+    Output: {fileID: 24300002, guid: 9a7070e95b37aee4991563d85bbf3ad3, type: 2}
+    Volume: 0.6
+    pitch: 1
+    isLoop: 0
+  - SoundName: button4
+    Clip: {fileID: 8300000, guid: ae64ea7a4fc7c644ab9aa99eba749012, type: 3}
+    Output: {fileID: 24300002, guid: 9a7070e95b37aee4991563d85bbf3ad3, type: 2}
+    Volume: 0.6
+    pitch: 1
+    isLoop: 0
+  - SoundName: pausedbutton
+    Clip: {fileID: 8300000, guid: 84af27ebaf9a975499a994ff91072d96, type: 3}
+    Output: {fileID: 24300002, guid: 9a7070e95b37aee4991563d85bbf3ad3, type: 2}
+    Volume: 0.6
+    pitch: 1
+    isLoop: 0
+  - SoundName: popup
+    Clip: {fileID: 8300000, guid: e96ef18ff3b322e4d9004f4397a071b8, type: 3}
+    Output: {fileID: 24300002, guid: 9a7070e95b37aee4991563d85bbf3ad3, type: 2}
+    Volume: 0.8
+    pitch: 1
+    isLoop: 0
+  - SoundName: interact
+    Clip: {fileID: 8300000, guid: dc97ebef109fe524bb4e14fa731aeba8, type: 3}
+    Output: {fileID: 24300002, guid: 9a7070e95b37aee4991563d85bbf3ad3, type: 2}
+    Volume: 0.8
     pitch: 1
     isLoop: 0

@@ -127,6 +127,15 @@ namespace Global.Audio
             }
         }
 
+        public void StopCurrentSoundFXClip(string clip)
+        {
+            sound s = SoundListOnScene.Find(x => x.SoundName == clip);
+            if (s != null)
+            {
+                s.source.Stop();
+            }
+        }
+
         public void BGMStopper() 
         {
             OnReduce = true;

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Global.Audio;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -44,6 +45,7 @@ namespace Global.Option
             options.SetActive(true);
             _GM.pause();
             FindObjectOfType<gamemaster>().ShowCursor();
+            FindObjectOfType<AudioManager>().StopCurrentSoundFXClip("pausedbutton");
         }
         public void closeall2()
         {
@@ -51,13 +53,14 @@ namespace Global.Option
             options.SetActive(false);
             _GM.resume();
             FindObjectOfType<gamemaster>().HideCursor();
-            FindObjectOfType<savedata>().SAVEGAME();
+            FindObjectOfType<option>().SaveOption();
+            FindObjectOfType<AudioManager>().StopCurrentSoundFXClip("button4");
         }
 
         public void unpause() 
         {
             _GM.resume();
-            FindObjectOfType<savedata>().SAVEGAME();
+            FindObjectOfType<option>().SaveOption();
         }
     }
 }

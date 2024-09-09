@@ -19,63 +19,72 @@ public class BalancingTorso : MonoBehaviour
 
     public float CurrentTorsoRotation;
 
+    public gamemaster gm;
+
     private void Start()
     {
         _RB2D = GetComponent<Rigidbody2D>();
         FindObjectOfType<gamemaster>().HideCursor();
+        gm = FindObjectOfType<gamemaster>();
     }
 
     private void FixedUpdate()
-    { 
-        var b = Input.GetAxis("Mouse X");
-        TorsoRotation -= b * ControlSensitivity;
+    {
+        if (gm.paused == false)
+        {
+            var b = Input.GetAxis("Mouse X");
+            TorsoRotation -= b * ControlSensitivity;
 
-        if (TorsoRotation >= MaxLean)
-        {
-            TorsoRotation = MaxLean;
-        }
-        else if (TorsoRotation <= -MaxLean)
-        {
-            TorsoRotation = -MaxLean;
+            if (TorsoRotation >= MaxLean)
+            {
+                TorsoRotation = MaxLean;
+            }
+            else if (TorsoRotation <= -MaxLean)
+            {
+                TorsoRotation = -MaxLean;
+            }
         }
     }
 
     public void Update()
     {
-        CurrentTorsoRotation = TorsoEmber.localRotation.z;
-        if (TorsoRotation <= MaxLean && TorsoRotation >= -MaxLean)
+        if (gm.paused == false)
         {
-            TorsoEmberAnchor.transform.rotation = Quaternion.Euler(0, 0, TorsoRotation);
-            TorsoEmber.transform.rotation = Quaternion.RotateTowards(TorsoEmber.transform.rotation, TorsoEmberAnchor.transform.rotation, KecepatanBucket * Time.deltaTime);
-        }
-
-
-        if(TorsoRotation <= MaxLeanCharacter && TorsoRotation >= -MaxLeanCharacter)
-        {
-            TorsoVisualCharacter.transform.rotation = Quaternion.Euler(0, 0, TorsoRotation);
-        }
-        else if (TorsoRotation <= -MaxLeanCharacter)
-        {
-            TorsoVisualCharacter.transform.rotation = Quaternion.Euler(0, 0, -MaxLeanCharacter);
-        }
-        else if (TorsoRotation >= MaxLeanCharacter)
-        {
-            TorsoVisualCharacter.transform.rotation = Quaternion.Euler(0, 0, MaxLeanCharacter);
-        }
-
-        if (TorsoRotation <= MaxLean && TorsoRotation >= -MaxLean)
-        {
-            if (TorsoRotation >= 0)
+            CurrentTorsoRotation = TorsoEmber.localRotation.z;
+            if (TorsoRotation <= MaxLean && TorsoRotation >= -MaxLean)
             {
-                TorsoRotation += 1 * WeightSensitivity;
-            }
-            else
-            {
-
-                TorsoRotation -= 1 * WeightSensitivity;
+                TorsoEmberAnchor.transform.rotation = Quaternion.Euler(0, 0, TorsoRotation);
+                TorsoEmber.transform.rotation = Quaternion.RotateTowards(TorsoEmber.transform.rotation, TorsoEmberAnchor.transform.rotation, KecepatanBucket * Time.deltaTime);
             }
 
-            TorsoRotation += _RB2D.velocity.x * TorsoSensitivity;
+
+            if (TorsoRotation <= MaxLeanCharacter && TorsoRotation >= -MaxLeanCharacter)
+            {
+                TorsoVisualCharacter.transform.rotation = Quaternion.Euler(0, 0, TorsoRotation);
+            }
+            else if (TorsoRotation <= -MaxLeanCharacter)
+            {
+                TorsoVisualCharacter.transform.rotation = Quaternion.Euler(0, 0, -MaxLeanCharacter);
+            }
+            else if (TorsoRotation >= MaxLeanCharacter)
+            {
+                TorsoVisualCharacter.transform.rotation = Quaternion.Euler(0, 0, MaxLeanCharacter);
+            }
+
+            if (TorsoRotation <= MaxLean && TorsoRotation >= -MaxLean)
+            {
+                if (TorsoRotation >= 0)
+                {
+                    TorsoRotation += 1 * WeightSensitivity;
+                }
+                else
+                {
+
+                    TorsoRotation -= 1 * WeightSensitivity;
+                }
+
+                TorsoRotation += _RB2D.velocity.x * TorsoSensitivity;
+            }
         }
     }
 

@@ -1,3 +1,4 @@
+using Global.Audio;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -75,11 +76,11 @@ public class CharacterController2D: MonoBehaviour
                 if (!wasGrounded)
                 {
                     Instantiate(dust, m_GroundCheck.position, m_GroundCheck.rotation);
+                    FindObjectOfType<AudioManager>().SetCurrentSoundFXClip("land");
                     OnLandEvent.Invoke();
                 }
                 if (onDash == true)
-                {
-                    
+                {             
                     onDash = false;
 
                 }

@@ -605,6 +605,7 @@ GameObject:
   - component: {fileID: 4078135198439391570}
   - component: {fileID: 4078135198439391571}
   - component: {fileID: 4078135198439391564}
+  - component: {fileID: 1054083962637242628}
   m_Layer: 5
   m_Name: BackToMenu
   m_TagString: Untagged
@@ -739,6 +740,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1054083962637242628}
+        m_TargetAssemblyTypeName: SFXTrigger, Assembly-CSharp
+        m_MethodName: PlayTheSFX
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: button4
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &4078135198439391564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -755,6 +768,19 @@ MonoBehaviour:
   waktutransisi: 0.5
   addscene: 0
   toscene: 0
+--- !u!114 &1054083962637242628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4078135198439391566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7169df7b9f728c7439c7d1a9975a9715, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TheSFX: 
 --- !u!1 &4078135198524217850
 GameObject:
   m_ObjectHideFlags: 0

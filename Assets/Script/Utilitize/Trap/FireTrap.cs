@@ -1,3 +1,4 @@
+using Global.Audio;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -42,6 +43,7 @@ public class FireTrap : MonoBehaviour
     public void SetOn()
     {
         OnActiveEvent.Invoke();
+        FindObjectOfType<AudioManager>().StopCurrentSoundFXClip("fireblast");
         Timer = OnTime;
         OnActive = true;
     }

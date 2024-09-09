@@ -1,3 +1,4 @@
+using Global.Audio;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -64,22 +65,27 @@ public class CharacterMovement : MonoBehaviour
                 characterLeg.SetFloat("jalan", Mathf.Abs(horizontalmove));
                 characterUpper.SetFloat("jalan", Mathf.Abs(horizontalmove));               
                 if (controller.m_midair == false)
-                {             
-
+                {
+                    if (Input.GetButtonDown("Jump"))
+                    {
+                        FindObjectOfType<AudioManager>().SetCurrentSoundFXClip("charge");
+                    }
                     if (Input.GetButton("Jump"))
                     {
-                        JumOnhold();
+                        JumOnhold();  
                     }
                     if (Input.GetButtonUp("Jump"))
                     {
                         Jumping();
+                        FindObjectOfType<AudioManager>().StopCurrentSoundFXClip("charge");
+                        FindObjectOfType<AudioManager>().SetCurrentSoundFXClip("jumping");
                     }
                 }
                 else
                 {
                     characterLeg.SetBool("nahanLompat", false);
                     characterUpper.SetBool("nahanLompat", false);
-                    
+                    FindObjectOfType<AudioManager>().StopCurrentSoundFXClip("charge");
                 }
                 Shadow.SetActive(true);
             }
@@ -170,6 +176,7 @@ public class CharacterMovement : MonoBehaviour
 
     public IEnumerator Respawn()
     {
+        FindObjectOfType<AudioManager>().StopCurrentSoundFXClip("dead");
         GotHitEvent.Invoke();
         PlayerColor.SetBool("lose", true);
         OnRespawn = true;
@@ -177,6 +184,7 @@ public class CharacterMovement : MonoBehaviour
         Destroy(b.gameObject, 3);
         EmberTorso.SetActive(false);
         yield return new WaitForSeconds(1f);
+        FindObjectOfType<AudioManager>().StopCurrentSoundFXClip("respawn");
         characterLeg.SetBool("nahanLompat", false);
         characterUpper.SetBool("nahanLompat", false);
         characterLeg.SetTrigger("respawn");
