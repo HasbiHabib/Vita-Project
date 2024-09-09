@@ -1,24 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelSelection : MonoBehaviour
 {
     public int LevelSavedLoaded;
-
-    public GameObject[] UnlockedLevel;
+    public int SceneSkip;
 
     public void Awake()
     {
         LevelSavedLoaded = FindObjectOfType<savedata>().LevelSaved;
-
-        for (int i = 0; i < UnlockedLevel.Length; i++)
-        {
-            if(i <= LevelSavedLoaded)
-            {
-                UnlockedLevel[i].SetActive(true);
-            }
-        }
+        toscene = LevelSavedLoaded + SceneSkip;
     }
 
+    public Animator transisi;
+    public float waktutransisi;
+    public int toscene;
+
+    public void StartMisi()
+    {
+        transisi = GameObject.FindGameObjectWithTag("transisi").GetComponent<Animator>();
+        transisi.SetTrigger("out2");
+        StartCoroutine(waitasec2());
+    }
+    IEnumerator waitasec2()
+    {
+        yield return new WaitForSecondsRealtime(waktutransisi);
+        SceneManager.LoadScene(toscene);
+    }
 }

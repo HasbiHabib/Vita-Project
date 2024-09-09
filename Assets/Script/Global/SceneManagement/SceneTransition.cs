@@ -13,18 +13,15 @@ public class SceneTransition : MonoBehaviour
     public void opennextscene()
 	{
         transisi = GameObject.FindGameObjectWithTag("transisi").GetComponent<Animator>();
-        transisi.SetTrigger("out");
+        transisi.SetTrigger("out2");
 		StartCoroutine(waitasec());
 	}
-
-
     public void openscene()
     {
         transisi = GameObject.FindGameObjectWithTag("transisi").GetComponent<Animator>();
-        transisi.SetTrigger("out");
+        transisi.SetTrigger("out2");
         StartCoroutine(waitasec2());
     }
-
     public void quit()
     {
     	Application.Quit();
@@ -39,5 +36,10 @@ public class SceneTransition : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(waktutransisi);
         SceneManager.LoadScene(toscene);
+    }
+
+    public void TransisiLangsung(int ToScene)
+    {
+        SceneManager.LoadScene(ToScene);
     }
 }

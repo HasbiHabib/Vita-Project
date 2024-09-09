@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class MovingPlatformer : MonoBehaviour
@@ -12,15 +13,24 @@ public class MovingPlatformer : MonoBehaviour
 
     int direction = 1;
 
+    public bool OnlyOneTime;
+
     private void Update()
     {
         Vector2 target = currentMovementTarget();
 
-        platform.position = Vector2.MoveTowards(platform.position, target, speed * Time.deltaTime);
+        if (!OnlyOneTime)
+        {
+            platform.position = Vector2.MoveTowards(platform.position, target, speed * Time.deltaTime);
+        }
+        else
+        {
+            platform.position = Vector2.Lerp(platform.position, target, speed * Time.deltaTime);
+        }
 
         float distance = (target - (Vector2)platform.position).magnitude;
 
-        if (distance <= 0.5f)
+        if (distance <= 0.5f && !OnlyOneTime)
         {
             direction *= -1;
         }

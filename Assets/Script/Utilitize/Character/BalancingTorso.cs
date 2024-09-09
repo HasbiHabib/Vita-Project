@@ -22,9 +22,7 @@ public class BalancingTorso : MonoBehaviour
     private void Start()
     {
         _RB2D = GetComponent<Rigidbody2D>();
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Confined;
-        Cursor.lockState = CursorLockMode.Locked;
+        FindObjectOfType<gamemaster>().HideCursor();
     }
 
     private void FixedUpdate()
