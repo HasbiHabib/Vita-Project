@@ -35,6 +35,8 @@ public class CharacterMovement : MonoBehaviour
     public UnityEvent GotHitEvent;
     public UnityEvent AfterHitEvent;
 
+    public GameObject Shadow;
+
     void Awake()
     {
         //on_cooldown = false;
@@ -72,8 +74,20 @@ public class CharacterMovement : MonoBehaviour
                     {
                         Jumping();
                     }
-
                 }
+                else
+                {
+                    characterLeg.SetBool("nahanLompat", false);
+                    characterUpper.SetBool("nahanLompat", false);
+                    
+                }
+                Shadow.SetActive(true);
+            }
+            else
+            {
+                characterLeg.SetBool("nahanLompat", false);
+                characterUpper.SetBool("nahanLompat", false);
+                Shadow.SetActive(false);
             }
         }
         else
@@ -97,7 +111,7 @@ public class CharacterMovement : MonoBehaviour
         else
         {
             characterLeg.SetBool("fall", false);
-            characterUpper.SetBool("fall", false);
+            characterUpper.SetBool("fall", false);    
         }
         if (rigid.velocity.y >= 1)
         {

@@ -20,17 +20,19 @@ namespace Global.Option
 
         void Update()
         {
-            if (!mainmenu)
+            if (!mainmenu && _GM.PlayerMovement == true)
             {
                 if (Input.GetButtonDown("esc"))
                 {
                     if (optionOn == true)
-                    {
+                    {           
                         closeall2();
+                        return;
                     }
                     else
                     {
                         openall2();
+                        return;
                     }
                 }
             }
@@ -38,15 +40,17 @@ namespace Global.Option
 
         public void openall2()
         {
-            StartCoroutine(tunggu3());
+            optionOn = true;
             options.SetActive(true);
             _GM.pause();
+            FindObjectOfType<gamemaster>().ShowCursor();
         }
         public void closeall2()
         {
-            StartCoroutine(tunggu4());
+            optionOn = false;
             options.SetActive(false);
             _GM.resume();
+            FindObjectOfType<gamemaster>().HideCursor();
             FindObjectOfType<savedata>().SAVEGAME();
         }
 
@@ -54,17 +58,6 @@ namespace Global.Option
         {
             _GM.resume();
             FindObjectOfType<savedata>().SAVEGAME();
-        }
-
-        IEnumerator tunggu3()
-        {
-            yield return new WaitForSecondsRealtime(0.3f);
-            optionOn = true;
-        }
-        IEnumerator tunggu4()
-        {
-            yield return new WaitForSecondsRealtime(0.3f);
-            optionOn = false;
         }
     }
 }

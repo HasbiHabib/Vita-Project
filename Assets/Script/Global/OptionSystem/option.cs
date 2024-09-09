@@ -14,18 +14,12 @@ namespace Global.Option
         public AudioMixer BGMs;
         public AudioMixer SFXs;
 
-        private void Start()
-        {
-            BGM_(BGM.value);
-            SFX_(sfx.value);
-        }
-
         public void NullLoad()
         {
-            BGM_(1);
-            SFX_(1);
-            BGM.value = 1f;
-            sfx.value = 1f;
+            BGM_(0.6F);
+            SFX_(0.6F);
+            BGM.value = 0.6F;
+            sfx.value = 0.6F;
         }
 
         public void LoadSetting(float sfxs, float bgm)

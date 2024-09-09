@@ -13,10 +13,26 @@ MonoBehaviour:
   m_Name: AudioData
   m_EditorClassIdentifier: 
   BgmList:
-  - BgmName: a
-    Clip: {fileID: 8300000, guid: d6bf8011e6f5b2a40917cc596285ca25, type: 3}
+  - BgmName: Base
+    Clip: {fileID: 8300000, guid: 26a3ab88105be0a4f8f25bd11d264cd2, type: 3}
+  - BgmName: Tutorial
+    Clip: {fileID: 8300000, guid: 8ec2358834e830c4b9349d5b08918a46, type: 3}
+  - BgmName: Level1
+    Clip: {fileID: 8300000, guid: 9b6977b22ec1f9540b90c9f313340425, type: 3}
+  - BgmName: Level2
+    Clip: {fileID: 8300000, guid: 08e4384553f2bff49a6639457f8ac825, type: 3}
+  - BgmName: Level3
+    Clip: {fileID: 8300000, guid: a95413a0871ccec4fbb0a02848784caf, type: 3}
+  - BgmName: Level4
+    Clip: {fileID: 8300000, guid: e8e901e15b1c29d429b6614769a09022, type: 3}
+  - BgmName: Level5
+    Clip: {fileID: 8300000, guid: 9d995dff7ff68924fb5e3c6486c7431a, type: 3}
+  - BgmName: Ending
+    Clip: {fileID: 8300000, guid: 47dcebdde2990f14db6a57e88211282c, type: 3}
   SoundList:
   - SoundName: button1
     Clip: {fileID: 8300000, guid: 7ff5dd6af20b92747b33ad4d71805d21, type: 3}
+    Output: {fileID: 24300002, guid: 9a7070e95b37aee4991563d85bbf3ad3, type: 2}
     Volume: 1
+    pitch: 1
     isLoop: 0

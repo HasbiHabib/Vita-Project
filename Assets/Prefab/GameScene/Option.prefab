@@ -66,7 +66,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 7028270569370559983, guid: ce28672197d5c78459081f388aa5f7dd, type: 3}
+  m_Sprite: {fileID: 7028270569370559983, guid: ce28672197d5c78459081f388aa5f7dd,
+    type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -142,7 +143,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 6174397211950465459, guid: ce28672197d5c78459081f388aa5f7dd, type: 3}
+  m_Sprite: {fileID: 6174397211950465459, guid: ce28672197d5c78459081f388aa5f7dd,
+    type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -425,7 +427,7 @@ MonoBehaviour:
   m_FillRect: {fileID: 4078135197837871953}
   m_HandleRect: {fileID: 4078135198561041346}
   m_Direction: 0
-  m_MinValue: -1
+  m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
   m_Value: 1
@@ -658,7 +660,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -3032422668733127000, guid: 81483f10c5a04d3469dc24fb63462fbb, type: 3}
+  m_Sprite: {fileID: -3032422668733127000, guid: 81483f10c5a04d3469dc24fb63462fbb,
+    type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1127,7 +1130,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 3703400912325807306, guid: 81483f10c5a04d3469dc24fb63462fbb, type: 3}
+  m_Sprite: {fileID: 3703400912325807306, guid: 81483f10c5a04d3469dc24fb63462fbb,
+    type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1193,10 +1197,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 4078135198649814057}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+      - m_Target: {fileID: 4078135198390469735}
+        m_TargetAssemblyTypeName: Global.Option.optionnavigator, Assembly-CSharp
         m_MethodName: closeall2
-        m_Mode: 6
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1289,7 +1293,7 @@ MonoBehaviour:
   m_FillRect: {fileID: 4078135199202404908}
   m_HandleRect: {fileID: 4078135198874403466}
   m_Direction: 0
-  m_MinValue: -1
+  m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
   m_Value: 1

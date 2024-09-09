@@ -38,8 +38,6 @@ public class CharacterController2D: MonoBehaviour
 
     public bool onDash = false;
 
-    public GameObject Shadow;
-
     private void Awake()
     {
         m_Rigidbody = GetComponent<Rigidbody2D>();
@@ -60,18 +58,6 @@ public class CharacterController2D: MonoBehaviour
                 firstland = false;
             }
         }
-        else
-        {
-            StartCoroutine(slammer());
-            firstland = true;
-        }
-
-        Shadow.SetActive(!m_midair);
-    }
-    IEnumerator slammer()
-    {
-        yield return new WaitForSeconds(0.1f);
-        m_midair = true;
     }
     private void FixedUpdate()
     {
