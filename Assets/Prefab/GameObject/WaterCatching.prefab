@@ -5479,6 +5479,7 @@ GameObject:
   - component: {fileID: 1539953940927801130}
   - component: {fileID: 1539953940927801131}
   - component: {fileID: 1539953940927801128}
+  - component: {fileID: 7767167447844024246}
   m_Layer: 6
   m_Name: Square (5)
   m_TagString: Untagged
@@ -5592,6 +5593,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50c8a3005a56bde4482b0f94d0d7a244, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7767167447844024246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539953940927801135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c5f616d7dc5d6d419e98af2aec9e737, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  CheckPoint: {fileID: 1539953941438349578}
+  WaterDrop: {fileID: 38323766195875056, guid: 8e29d696331daf748853398cac2931da, type: 3}
 --- !u!1 &1539953940978108591
 GameObject:
   m_ObjectHideFlags: 0
@@ -5604,6 +5620,7 @@ GameObject:
   - component: {fileID: 1539953940978108586}
   - component: {fileID: 1539953940978108587}
   - component: {fileID: 1539953940978108584}
+  - component: {fileID: 209360267269478243}
   m_Layer: 6
   m_Name: Square (1)
   m_TagString: Untagged
@@ -5717,6 +5734,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50c8a3005a56bde4482b0f94d0d7a244, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &209360267269478243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539953940978108591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c5f616d7dc5d6d419e98af2aec9e737, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  CheckPoint: {fileID: 1539953941438349578}
+  WaterDrop: {fileID: 38323766195875056, guid: 8e29d696331daf748853398cac2931da, type: 3}
 --- !u!1 &1539953941143207944
 GameObject:
   m_ObjectHideFlags: 0
@@ -5946,6 +5978,7 @@ GameObject:
   - component: {fileID: 1539953941162177350}
   - component: {fileID: 1539953941162177351}
   - component: {fileID: 1539953941162177344}
+  - component: {fileID: 7383835884655706426}
   m_Layer: 6
   m_Name: Square
   m_TagString: Untagged
@@ -6059,6 +6092,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50c8a3005a56bde4482b0f94d0d7a244, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7383835884655706426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539953941162177349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c5f616d7dc5d6d419e98af2aec9e737, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  CheckPoint: {fileID: 1539953941438349578}
+  WaterDrop: {fileID: 38323766195875056, guid: 8e29d696331daf748853398cac2931da, type: 3}
 --- !u!1 &1539953941286398654
 GameObject:
   m_ObjectHideFlags: 0
@@ -11258,6 +11306,7 @@ GameObject:
   - component: {fileID: 1539953941932873894}
   - component: {fileID: 1539953941932873895}
   - component: {fileID: 1539953941932873892}
+  - component: {fileID: 253129464524948084}
   m_Layer: 10
   m_Name: Square (6)
   m_TagString: Untagged
@@ -11371,6 +11420,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50c8a3005a56bde4482b0f94d0d7a244, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &253129464524948084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539953941932873898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c5f616d7dc5d6d419e98af2aec9e737, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  CheckPoint: {fileID: 1539953941438349578}
+  WaterDrop: {fileID: 38323766195875056, guid: 8e29d696331daf748853398cac2931da, type: 3}
 --- !u!1 &2644670576494810251
 GameObject:
   m_ObjectHideFlags: 0
