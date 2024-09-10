@@ -54,6 +54,7 @@ public class CharacterMovement : MonoBehaviour
         Physics2D.IgnoreLayerCollision(9, 10);
         Physics2D.IgnoreLayerCollision(8, 10);
         Physics2D.IgnoreLayerCollision(11, 7);
+        Physics2D.IgnoreLayerCollision(10, 7);
 
         LastCheckPoint = GameObject.FindGameObjectWithTag("firstCP").GetComponent<Transform>();
     }
