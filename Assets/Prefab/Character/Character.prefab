@@ -2795,9 +2795,13 @@ MonoBehaviour:
   m_AirControl: 0
   m_WhatIsGround:
     serializedVersion: 2
-    m_Bits: 1088
+    m_Bits: 3136
   m_GroundCheck: {fileID: 6243804958398278255}
+  m_WhatIsIce:
+    serializedVersion: 2
+    m_Bits: 2048
   CharacterVisual: {fileID: 6243804958078909683}
+  IceSmooth: 1
   m_Grounded: 0
   m_midair: 0
   m_FacingRight: 1
@@ -2971,7 +2975,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 878eb58a52d4977478e4cd70962fcc73, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0

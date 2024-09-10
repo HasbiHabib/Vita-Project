@@ -50,7 +50,7 @@ public class CharacterMovementBase : MonoBehaviour
 
     void FixedUpdate()
     {
-        controller.Move(horizontalmove * Time.fixedDeltaTime, false, false);
+        controller.Move(horizontalmove * Time.fixedDeltaTime, false, false, false);
         //slam = false;
         //dash = false;
     }

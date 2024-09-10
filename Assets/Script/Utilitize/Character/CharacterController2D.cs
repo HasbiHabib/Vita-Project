@@ -8,16 +8,17 @@ public class CharacterController2D: MonoBehaviour
 {
     [SerializeField] private float JumpForce;
     [SerializeField] private float m_Speedup = .36f;            // Amount of maxSpeed applied to crouching movement. 1 = 100%
-    [Range(0, .3f)][SerializeField] private float m_MovementSmoothing = .05f;   // How much to smooth out the movement
+    [SerializeField] private float m_MovementSmoothing;   // How much to smooth out the movement
     [SerializeField] private bool m_AirControl = false;                         // Whether or not a player can steer while jumping;
     [SerializeField] public LayerMask m_WhatIsGround;                           // A mask determining what is ground to the character
     [SerializeField] public Transform m_GroundCheck;                            // A position marking where to check if the player is grounded.
+    [SerializeField] public LayerMask m_WhatIsIce;
 
     public GameObject CharacterVisual;
 
 
     private bool firstland = true;
-
+    public float IceSmooth;
     const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
     public bool m_Grounded;            // Whether or not the player is grounded.
     public bool m_midair;            // Whether or not the player is midair.
@@ -59,6 +60,10 @@ public class CharacterController2D: MonoBehaviour
                 firstland = false;
             }
         }
+        else
+        {
+            m_MovementSmoothing = 0;
+        }
     }
     private void FixedUpdate()
     {
@@ -78,12 +83,25 @@ public class CharacterController2D: MonoBehaviour
                     Instantiate(dust, m_GroundCheck.position, m_GroundCheck.rotation);
                     FindObjectOfType<AudioManager>().SetCurrentSoundFXClip("land");
                     OnLandEvent.Invoke();
+                    CheckIced();
                 }
                 if (onDash == true)
-                {             
+                {
                     onDash = false;
 
                 }
+            }
+        }
+
+    }
+    public void CheckIced()
+    {
+        Collider2D[] collider2s = Physics2D.OverlapCircleAll(m_GroundCheck.position, k_GroundedRadius, m_WhatIsIce);
+        for (int b = 0; b < collider2s.Length; b++)
+        {
+            if (collider2s[b].gameObject != gameObject)
+            {
+                m_MovementSmoothing = IceSmooth;
             }
         }
     }
@@ -94,7 +112,7 @@ public class CharacterController2D: MonoBehaviour
     }
 
 
-    public void Move(float move, bool jump, bool speedup)
+    public void Move(float move, bool jump, bool speedup, bool Oncharge)
     {
         //only control the player if grounded or airControl is turned on
         if (m_Grounded || m_AirControl)
@@ -143,6 +161,10 @@ public class CharacterController2D: MonoBehaviour
             m_Rigidbody.AddForce(new Vector2(0f, JumpForce));
             OnJumpEvent.Invoke();
             //Instantiate(dust, m_GroundCheck.position, m_GroundCheck.rotation);
+        }
+        if (Oncharge)
+        {
+            m_MovementSmoothing = 0;
         }
     }
 

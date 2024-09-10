@@ -9702,6 +9702,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: TreeWatering
       objectReference: {fileID: 0}
+    - target: {fileID: 4448735885300862202, guid: 886c03c87ff6f2040973df22bd597874,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448735885672744785, guid: 886c03c87ff6f2040973df22bd597874,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448735886281200473, guid: 886c03c87ff6f2040973df22bd597874,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 886c03c87ff6f2040973df22bd597874, type: 3}
 --- !u!23 &4450672740840985390

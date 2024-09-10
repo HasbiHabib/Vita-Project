@@ -14,6 +14,7 @@ public class CharacterMovement : MonoBehaviour
     [Header("condition_thing")]
     public bool onEvent;
     private bool jump;
+    private bool OnCharge;
 
     public float JumpStarted;
     public float JumpAdder;
@@ -52,7 +53,7 @@ public class CharacterMovement : MonoBehaviour
         Physics2D.IgnoreLayerCollision(9, 9);
         Physics2D.IgnoreLayerCollision(9, 10);
         Physics2D.IgnoreLayerCollision(8, 10);
-        Physics2D.IgnoreLayerCollision(7, 10);
+        Physics2D.IgnoreLayerCollision(11, 7);
 
         LastCheckPoint = GameObject.FindGameObjectWithTag("firstCP").GetComponent<Transform>();
     }
@@ -71,16 +72,18 @@ public class CharacterMovement : MonoBehaviour
                     if (Input.GetButtonDown("Jump"))
                     {
                         FindObjectOfType<AudioManager>().SetCurrentSoundFXClip("charge");
+                        OnCharge = true;
                     }
                     if (Input.GetButton("Jump"))
                     {
-                        JumOnhold();  
+                        JumOnhold();
                     }
                     if (Input.GetButtonUp("Jump"))
                     {
                         Jumping();
                         FindObjectOfType<AudioManager>().StopCurrentSoundFXClip("charge");
                         FindObjectOfType<AudioManager>().SetCurrentSoundFXClip("jumping");
+                        OnCharge = false;
                     }
                 }
                 else
@@ -136,7 +139,7 @@ public class CharacterMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        controller.Move(horizontalmove * Time.fixedDeltaTime, jump, false);
+        controller.Move(horizontalmove * Time.fixedDeltaTime, jump, false, OnCharge);
         jump = false;
         //slam = false;
         //dash = false;

@@ -1273,7 +1273,7 @@
             "m_Id": "c614ddd2e80a4442a896b35cd6ac4eee"
         },
         {
-            "m_Id": "bd1cd23952044ed5a8f0d7e39aa4d1d8"
+            "m_Id": "6e395d996ec544bfa1816036fe932e1e"
         }
     ],
     "m_CustomEditorGUI": "",
@@ -3378,6 +3378,14 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.Rendering.HighDefinition.ShaderGraph.HDUnlitData",
+    "m_ObjectId": "6e395d996ec544bfa1816036fe932e1e",
+    "m_EnableShadowMatte": false,
+    "m_DistortionOnly": false
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.SineNode",
     "m_ObjectId": "6eb9cf0310e94078b6ea6e7898153f20",
     "m_Group": {
@@ -4918,14 +4926,6 @@
     "m_Value": 0.0,
     "m_DefaultValue": 0.0,
     "m_Labels": []
-}
-
-{
-    "m_SGVersion": 0,
-    "m_Type": "UnityEditor.Rendering.HighDefinition.ShaderGraph.HDUnlitData",
-    "m_ObjectId": "bd1cd23952044ed5a8f0d7e39aa4d1d8",
-    "m_EnableShadowMatte": false,
-    "m_DistortionOnly": false
 }
 
 {
