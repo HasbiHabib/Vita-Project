@@ -1,7 +1,7 @@
 using Global.Audio;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
+using TMPro;
 using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,9 +11,9 @@ public class DialogueManager : MonoBehaviour
     [Header ("MainDialogueTarget")]
     public GameObject thedialogbar;
     public Animator DialogBar1Anim;
-    public Text dialogtext;                           // text dialogue yang di display
+    public TextMeshProUGUI dialogtext;                           // text dialogue yang di display
     public Image CharacterSprite;                            // image dialogue yang di display
-    public Text CharacterName;
+    public TextMeshProUGUI CharacterName;
     public Sprite empty;
 
     // float script
