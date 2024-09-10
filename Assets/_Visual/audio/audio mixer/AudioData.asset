@@ -81,13 +81,13 @@ MonoBehaviour:
   - SoundName: respawn
     Clip: {fileID: 8300000, guid: b9d22b43ae3c3bd4d9d46b0f8e2ad2f2, type: 3}
     Output: {fileID: 24300002, guid: 9a7070e95b37aee4991563d85bbf3ad3, type: 2}
-    Volume: 0.6
+    Volume: 0.2
     pitch: 1
     isLoop: 0
   - SoundName: dead
     Clip: {fileID: 8300000, guid: 632fc673e7044fc40ace89f310341482, type: 3}
     Output: {fileID: 24300002, guid: 9a7070e95b37aee4991563d85bbf3ad3, type: 2}
-    Volume: 0.6
+    Volume: 0.5
     pitch: 1
     isLoop: 0
   - SoundName: fireblast

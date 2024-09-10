@@ -178,7 +178,7 @@ public class CharacterMovement : MonoBehaviour
 
     public IEnumerator Respawn()
     {
-        FindObjectOfType<AudioManager>().StopCurrentSoundFXClip("dead");
+        FindObjectOfType<AudioManager>().SetCurrentSoundFXClip("dead");
         GotHitEvent.Invoke();
         PlayerColor.SetBool("lose", true);
         OnRespawn = true;
@@ -186,7 +186,7 @@ public class CharacterMovement : MonoBehaviour
         Destroy(b.gameObject, 3);
         EmberTorso.SetActive(false);
         yield return new WaitForSeconds(1f);
-        FindObjectOfType<AudioManager>().StopCurrentSoundFXClip("respawn");
+        FindObjectOfType<AudioManager>().SetCurrentSoundFXClip("respawn");
         characterLeg.SetBool("nahanLompat", false);
         characterUpper.SetBool("nahanLompat", false);
         characterLeg.SetTrigger("respawn");
