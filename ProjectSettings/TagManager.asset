@@ -9,6 +9,7 @@ TagManager:
   - ground
   - transisi
   - WaterContainer
+  - firstCP
   layers:
   - Default
   - TransparentFX
