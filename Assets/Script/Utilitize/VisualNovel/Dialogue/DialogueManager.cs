@@ -37,8 +37,6 @@ public class DialogueManager : MonoBehaviour
     public KeyCode nextKeyButton2;
     public bool TextUp;
 
-    //public Animator thedialogbars;
-
     void Start()
     {
         // menentukan text si NPC
@@ -55,7 +53,7 @@ public class DialogueManager : MonoBehaviour
         // set the dialogue that suit the description
         dialogueTrigger = dialog;
         thedialogbar.SetActive(true);
-        
+        DialogBar1Anim.SetTrigger("pop");
         _GM.SetPlayerMove(false);
         ondialogue = true;
 
@@ -82,7 +80,7 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayNextSentence()
     {
-        //thedialogbars.SetTrigger("pop");   
+           
         if (sentences.Count == 0)
         {
             EndDialogue();
@@ -97,7 +95,7 @@ public class DialogueManager : MonoBehaviour
         CharacterSprite.sprite = wajahi;
         string namas = NameChar.Dequeue();
         CharacterName.text = namas;
-        //DialogBar1Anim.SetTrigger("next");
+        
 
         StopAllCoroutines();
         StartCoroutine(Typesentence(sentence));
@@ -151,6 +149,7 @@ public class DialogueManager : MonoBehaviour
             {
                 TextUp = false;
                 DisplayNextSentence();
+                DialogBar1Anim.SetTrigger("next");
                 return;
             }
         }

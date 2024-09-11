@@ -14,6 +14,10 @@ namespace Global.Option
         private bool optionOn;
         public bool mainmenu;
 
+        public bool CanTriigger = true;
+
+        public Animator TheAnimationBar;
+
         private void Start()
         {
             _GM = FindObjectOfType<gamemaster>();
@@ -21,7 +25,7 @@ namespace Global.Option
 
         void Update()
         {
-            if (!mainmenu && _GM.PlayerMovement == true)
+            if (!mainmenu && _GM.PlayerMovement == true && CanTriigger == true)
             {
                 if (Input.GetButtonDown("esc"))
                 {
@@ -42,19 +46,37 @@ namespace Global.Option
         public void openall2()
         {
             optionOn = true;
-            options.SetActive(true);
-            _GM.pause();
-            FindObjectOfType<gamemaster>().ShowCursor();
-            FindObjectOfType<AudioManager>().StopCurrentSoundFXClip("pausedbutton");
+            CanTriigger = false;
+            FindObjectOfType<gamemaster>().ShowCursor();    
+            FindObjectOfType<AudioManager>().SetCurrentSoundFXClip("pausedbutton");
+            StartCoroutine(DelayTheOpening());
         }
         public void closeall2()
         {
             optionOn = false;
-            options.SetActive(false);
-            _GM.resume();
+            CanTriigger = false;
             FindObjectOfType<gamemaster>().HideCursor();
             FindObjectOfType<option>().SaveOption();
-            FindObjectOfType<AudioManager>().StopCurrentSoundFXClip("button4");
+            FindObjectOfType<AudioManager>().SetCurrentSoundFXClip("button4");
+            StartCoroutine(DelayTheClosing());
+        }
+
+        IEnumerator DelayTheOpening()
+        {
+            options.SetActive(true);
+            TheAnimationBar.SetTrigger("in");
+            _GM.pause();  
+            yield return new WaitForSecondsRealtime(0.5f);
+            CanTriigger = true;
+        }
+
+        IEnumerator DelayTheClosing()
+        {       
+            TheAnimationBar.SetTrigger("out");
+            _GM.resume();       
+            yield return new WaitForSecondsRealtime(0.5f);
+            options.SetActive(false);
+            CanTriigger = true;
         }
 
         public void unpause() 
