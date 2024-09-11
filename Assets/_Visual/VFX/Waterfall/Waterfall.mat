@@ -63,6 +63,7 @@ Material:
     - _DstBlend: 0
     - _EnableBlendModePreserveSpecularLighting: 0
     - _EnableFogOnTransparent: 1
+    - _Erosion: 0
     - _OpaqueCullMode: 2
     - _RenderQueueType: 1
     - _RippleAmount: 2
@@ -84,7 +85,7 @@ Material:
     - _TransparentWritingMotionVec: 0
     - _TransparentZWrite: 0
     - _UseShadowThreshold: 0
-    - _VertexOffsetAmount: 0.05
+    - _VertexOffsetAmount: 0.02
     - _VoronoiScale: 10
     - _VoronoiSpeed: 2
     - _ZTestDepthEqualForOpaque: 3
