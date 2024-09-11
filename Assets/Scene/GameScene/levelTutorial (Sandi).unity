@@ -1649,6 +1649,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 205782440199891195, guid: af6d7e02295004743a12c499609c628d,
+        type: 3}
+      propertyPath: m_text
+      value: VITA - SIMULATION
+      objectReference: {fileID: 0}
+    - target: {fileID: 205782440199891195, guid: af6d7e02295004743a12c499609c628d,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 3657433087
+      objectReference: {fileID: 0}
     - target: {fileID: 1050849556658446315, guid: af6d7e02295004743a12c499609c628d,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1759,6 +1769,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ----INGAMECanvas------
       objectReference: {fileID: 0}
+    - target: {fileID: 1050849556705170124, guid: af6d7e02295004743a12c499609c628d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1050849556787627063, guid: af6d7e02295004743a12c499609c628d,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -1829,10 +1844,25 @@ PrefabInstance:
       propertyPath: EventEnd.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 1289937769631727906, guid: af6d7e02295004743a12c499609c628d,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 1509949439
+      objectReference: {fileID: 0}
     - target: {fileID: 1780679022044163087, guid: af6d7e02295004743a12c499609c628d,
         type: 3}
       propertyPath: m_Text
       value: Training - Room
+      objectReference: {fileID: 0}
+    - target: {fileID: 2741369581854580931, guid: af6d7e02295004743a12c499609c628d,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2741369581854580931, guid: af6d7e02295004743a12c499609c628d,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4284007227101187714, guid: af6d7e02295004743a12c499609c628d,
         type: 3}
@@ -1888,6 +1918,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMin.x
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4712724358982295236, guid: af6d7e02295004743a12c499609c628d,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4712724358982295236, guid: af6d7e02295004743a12c499609c628d,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4712724358982295236, guid: af6d7e02295004743a12c499609c628d,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af6d7e02295004743a12c499609c628d, type: 3}
