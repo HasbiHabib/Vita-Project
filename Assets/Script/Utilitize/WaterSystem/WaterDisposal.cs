@@ -16,7 +16,16 @@ public class WaterDisposal : MonoBehaviour
         if (collision.tag == "WaterLiquids")
         {
             gameplayManager.AddContent();
-            Destroy(collision.gameObject,3);
+            Destroy(collision.gameObject,2);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "WaterLiquids")
+        {
+            gameplayManager.AddContent();
+            Destroy(collision.gameObject);
         }
     }
 }

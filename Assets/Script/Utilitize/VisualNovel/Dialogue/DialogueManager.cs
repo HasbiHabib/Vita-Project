@@ -1,7 +1,7 @@
 using Global.Audio;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
+using TMPro;
 using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,9 +11,9 @@ public class DialogueManager : MonoBehaviour
     [Header ("MainDialogueTarget")]
     public GameObject thedialogbar;
     public Animator DialogBar1Anim;
-    public Text dialogtext;                           // text dialogue yang di display
+    public TextMeshProUGUI dialogtext;                           // text dialogue yang di display
     public Image CharacterSprite;                            // image dialogue yang di display
-    public Text CharacterName;
+    public TextMeshProUGUI CharacterName;
     public Sprite empty;
 
     // float script
@@ -37,8 +37,6 @@ public class DialogueManager : MonoBehaviour
     public KeyCode nextKeyButton2;
     public bool TextUp;
 
-    //public Animator thedialogbars;
-
     void Start()
     {
         // menentukan text si NPC
@@ -55,7 +53,7 @@ public class DialogueManager : MonoBehaviour
         // set the dialogue that suit the description
         dialogueTrigger = dialog;
         thedialogbar.SetActive(true);
-        
+        DialogBar1Anim.SetTrigger("pop");
         _GM.SetPlayerMove(false);
         ondialogue = true;
 
@@ -82,7 +80,7 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayNextSentence()
     {
-        //thedialogbars.SetTrigger("pop");   
+           
         if (sentences.Count == 0)
         {
             EndDialogue();
@@ -97,7 +95,7 @@ public class DialogueManager : MonoBehaviour
         CharacterSprite.sprite = wajahi;
         string namas = NameChar.Dequeue();
         CharacterName.text = namas;
-        //DialogBar1Anim.SetTrigger("next");
+        
 
         StopAllCoroutines();
         StartCoroutine(Typesentence(sentence));
@@ -151,6 +149,7 @@ public class DialogueManager : MonoBehaviour
             {
                 TextUp = false;
                 DisplayNextSentence();
+                DialogBar1Anim.SetTrigger("next");
                 return;
             }
         }

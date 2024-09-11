@@ -4957,7 +4957,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1539953940321147093}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.09922492, y: 4.44, z: -0.077953875}
+  m_LocalPosition: {x: -0.09922492, y: 4.44, z: 0}
   m_LocalScale: {x: 27.574526, y: 6.709037, z: 2.8187275}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5607,7 +5607,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   CheckPoint: {fileID: 1539953941438349578}
-  WaterDrop: {fileID: 38323766195875056, guid: 8e29d696331daf748853398cac2931da, type: 3}
+  WaterDrop: {fileID: 2362148443695554462, guid: 95976863c5d6a4743ac23fadff7cf498,
+    type: 3}
 --- !u!1 &1539953940978108591
 GameObject:
   m_ObjectHideFlags: 0
@@ -5748,7 +5749,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   CheckPoint: {fileID: 1539953941438349578}
-  WaterDrop: {fileID: 38323766195875056, guid: 8e29d696331daf748853398cac2931da, type: 3}
+  WaterDrop: {fileID: 2362148443695554462, guid: 95976863c5d6a4743ac23fadff7cf498,
+    type: 3}
 --- !u!1 &1539953941143207944
 GameObject:
   m_ObjectHideFlags: 0
@@ -6106,7 +6108,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   CheckPoint: {fileID: 1539953941438349578}
-  WaterDrop: {fileID: 38323766195875056, guid: 8e29d696331daf748853398cac2931da, type: 3}
+  WaterDrop: {fileID: 2362148443695554462, guid: 95976863c5d6a4743ac23fadff7cf498,
+    type: 3}
 --- !u!1 &1539953941286398654
 GameObject:
   m_ObjectHideFlags: 0
@@ -11434,7 +11437,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   CheckPoint: {fileID: 1539953941438349578}
-  WaterDrop: {fileID: 38323766195875056, guid: 8e29d696331daf748853398cac2931da, type: 3}
+  WaterDrop: {fileID: 2362148443695554462, guid: 95976863c5d6a4743ac23fadff7cf498,
+    type: 3}
 --- !u!1 &2644670576494810251
 GameObject:
   m_ObjectHideFlags: 0
