@@ -4850,6 +4850,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 205782440199891195, guid: af6d7e02295004743a12c499609c628d,
+        type: 3}
+      propertyPath: m_text
+      value: AREA - HOLLOW
+      objectReference: {fileID: 0}
+    - target: {fileID: 205782440199891195, guid: af6d7e02295004743a12c499609c628d,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4043309055
+      objectReference: {fileID: 0}
     - target: {fileID: 1050849556658446315, guid: af6d7e02295004743a12c499609c628d,
         type: 3}
       propertyPath: m_Pivot.x
