@@ -93,6 +93,50 @@ ScriptedImporter:
     spritePosition: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
+  - name: guide - second screen - space - the line
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 482
+      y: 2180
+      width: 159
+      height: 2
+    spriteID: a6c70809ca4bf3b4a97a5706e1579c54
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 482, y: 2180}
+    spritePosition: {x: 876, y: 128}
+  - name: guide - second screen - the border
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2180
+      width: 470
+      height: 60
+    spriteID: 0ef4de8a1c0e7044bb33ed44eede4b4e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 2180}
+    spritePosition: {x: 725, y: 90}
   - name: guide - second screen - mouse - main mouse
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -519,6 +563,36 @@ ScriptedImporter:
   resliceFromLayer: 0
   mosaicPSDLayers: []
   rigPSDLayers:
+  - name: guide - second screen - space
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: d5e0afe1eeb0bd84fb1499984771768d
+    layerID: 100
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: guide - second screen - space - the line
+    spriteName: guide - second screen - space - the line
+    isGroup: 0
+    parentIndex: 0
+    spriteID: a6c70809ca4bf3b4a97a5706e1579c54
+    layerID: 99
+    mosaicPosition: {x: 482, y: 2180}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: guide - second screen - the border
+    spriteName: guide - second screen - the border
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 0ef4de8a1c0e7044bb33ed44eede4b4e
+    layerID: 97
+    mosaicPosition: {x: 4, y: 2180}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
   - name: guide - second screen - mouse
     spriteName: 
     isGroup: 1
@@ -532,7 +606,7 @@ ScriptedImporter:
   - name: guide - second screen - mouse - mouse
     spriteName: 
     isGroup: 1
-    parentIndex: 0
+    parentIndex: 3
     spriteID: 1882cf1cf8bd6064e8fb25c0401e8262
     layerID: 92
     mosaicPosition: {x: 0, y: 0}
@@ -542,7 +616,7 @@ ScriptedImporter:
   - name: guide - second screen - mouse - main mouse
     spriteName: guide - second screen - mouse - main mouse
     isGroup: 0
-    parentIndex: 1
+    parentIndex: 4
     spriteID: 22ea4eabf18356143b4d59c272753683
     layerID: 87
     mosaicPosition: {x: 1932, y: 402}
@@ -552,7 +626,7 @@ ScriptedImporter:
   - name: guide - second screen - mouse - shadow mouse
     spriteName: guide - second screen - mouse - shadow mouse
     isGroup: 0
-    parentIndex: 1
+    parentIndex: 4
     spriteID: 9bdbb5b20f51b064694636a7ba890ae0
     layerID: 86
     mosaicPosition: {x: 1932, y: 93}
@@ -562,7 +636,7 @@ ScriptedImporter:
   - name: guide - second screen - mouse - shadow mouse
     spriteName: guide - second screen - mouse - shadow mouse
     isGroup: 0
-    parentIndex: 1
+    parentIndex: 4
     spriteID: 6aac3cce5a2f41f4bb69acac4c5b5a69
     layerID: 85
     mosaicPosition: {x: 1932, y: 203}
@@ -572,7 +646,7 @@ ScriptedImporter:
   - name: guide - second screen - mouse - arrow
     spriteName: 
     isGroup: 1
-    parentIndex: 0
+    parentIndex: 3
     spriteID: 60f90609b0104614db3188df7507507e
     layerID: 90
     mosaicPosition: {x: 0, y: 0}
@@ -582,7 +656,7 @@ ScriptedImporter:
   - name: guide - second screen - mouse - left arrow
     spriteName: guide - second screen - mouse - left arrow
     isGroup: 0
-    parentIndex: 5
+    parentIndex: 8
     spriteID: 087e626cffe405d448876fdfb97066d1
     layerID: 84
     mosaicPosition: {x: 1932, y: 723}
@@ -592,7 +666,7 @@ ScriptedImporter:
   - name: guide - second screen - mouse - right arrow
     spriteName: guide - second screen - mouse - right arrow
     isGroup: 0
-    parentIndex: 5
+    parentIndex: 8
     spriteID: f66ccc7b317da224ca65f6877c2a2869
     layerID: 83
     mosaicPosition: {x: 1932, y: 738}
@@ -612,7 +686,7 @@ ScriptedImporter:
   - name: 'guide - second screen - AD - arrow '
     spriteName: 
     isGroup: 1
-    parentIndex: 8
+    parentIndex: 11
     spriteID: 77ac0b18ce5fd354c82f721a964b9122
     layerID: 94
     mosaicPosition: {x: 0, y: 0}
@@ -622,7 +696,7 @@ ScriptedImporter:
   - name: guide - second screen - AD - arrow - right arrow
     spriteName: guide - second screen - AD - arrow - right arrow
     isGroup: 0
-    parentIndex: 9
+    parentIndex: 12
     spriteID: 6be111224dcf2d148a12c05eaecdb3d5
     layerID: 64
     mosaicPosition: {x: 1932, y: 679}
@@ -632,7 +706,7 @@ ScriptedImporter:
   - name: guide - second screen - AD - arrow - left arrow
     spriteName: guide - second screen - AD - arrow - left arrow
     isGroup: 0
-    parentIndex: 9
+    parentIndex: 12
     spriteID: 0a2c7cd630202be43852359bdf2757f8
     layerID: 63
     mosaicPosition: {x: 1932, y: 701}
@@ -642,7 +716,7 @@ ScriptedImporter:
   - name: guide - second screen - AD - A sign
     spriteName: 
     isGroup: 1
-    parentIndex: 8
+    parentIndex: 11
     spriteID: 70f6d5e5d6d1ee147b1938c491eda0e6
     layerID: 62
     mosaicPosition: {x: 0, y: 0}
@@ -652,7 +726,7 @@ ScriptedImporter:
   - name: guide - second screen - AD - A sign - A
     spriteName: guide - second screen - AD - A sign - A
     isGroup: 0
-    parentIndex: 12
+    parentIndex: 15
     spriteID: da4eebd88fd79e64485d9d76352a55d4
     layerID: 61
     mosaicPosition: {x: 1995, y: 457}
@@ -662,7 +736,7 @@ ScriptedImporter:
   - name: guide - second screen - AD - box border
     spriteName: guide - second screen - AD - box border
     isGroup: 0
-    parentIndex: 12
+    parentIndex: 15
     spriteID: f2b71cf5cf0fbb241b04994f9b9bf89b
     layerID: 60
     mosaicPosition: {x: 1932, y: 4}
@@ -672,7 +746,7 @@ ScriptedImporter:
   - name: guide - second screen - AD - box fill
     spriteName: guide - second screen - AD - box fill
     isGroup: 0
-    parentIndex: 12
+    parentIndex: 15
     spriteID: 1ed4a1fc274571c449f6406a5e4caa54
     layerID: 67
     mosaicPosition: {x: 1932, y: 513}
@@ -682,7 +756,7 @@ ScriptedImporter:
   - name: guide - second screen - AD - D sign
     spriteName: 
     isGroup: 1
-    parentIndex: 8
+    parentIndex: 11
     spriteID: b3c069cfae50c2f40be62c0d241ff838
     layerID: 58
     mosaicPosition: {x: 0, y: 0}
@@ -692,7 +766,7 @@ ScriptedImporter:
   - name: guide - second screen - AD - D sign - box border
     spriteName: guide - second screen - AD - D sign - box border
     isGroup: 0
-    parentIndex: 16
+    parentIndex: 19
     spriteID: a777450c0314a9543ae17fb8cad713a1
     layerID: 57
     mosaicPosition: {x: 1932, y: 313}
@@ -702,7 +776,7 @@ ScriptedImporter:
   - name: guide - second screen - AD - D sign - D
     spriteName: guide - second screen - AD - D sign - D
     isGroup: 0
-    parentIndex: 16
+    parentIndex: 19
     spriteID: 1a34c69bafdefda47a0812bd916dc32a
     layerID: 56
     mosaicPosition: {x: 1995, y: 402}
@@ -712,7 +786,7 @@ ScriptedImporter:
   - name: guide - second screen - AD - D sign - box fill
     spriteName: guide - second screen - AD - D sign - box fill
     isGroup: 0
-    parentIndex: 16
+    parentIndex: 19
     spriteID: 0f3174ec381972c44904368b881e8e7a
     layerID: 68
     mosaicPosition: {x: 1932, y: 596}
