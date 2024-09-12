@@ -35,7 +35,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -350.0067, y: -164.34036}
+  m_AnchoredPosition: {x: -427, y: -204}
   m_SizeDelta: {x: 69.915, y: 82.0174}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &636983749327996119
@@ -306,7 +306,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -231, y: -124.30001}
+  m_AnchoredPosition: {x: -307.99332, y: -163.95966}
   m_SizeDelta: {x: 143.8921, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4078135198180918209
@@ -736,7 +736,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -6.894099, y: 90.21997}
+  m_AnchoredPosition: {x: 10, y: 74}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4078135199116418863
@@ -874,7 +874,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -231.00002, y: -167.16002}
+  m_AnchoredPosition: {x: -307.99332, y: -206.81967}
   m_SizeDelta: {x: 143.8921, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4078135199142293788
@@ -1206,7 +1206,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -368.92084, y: -79.16404}
+  m_AnchoredPosition: {x: -445.91415, y: -118.82368}
   m_SizeDelta: {x: 22.184, y: 5.5979}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5200897695456422137
@@ -1427,7 +1427,7 @@ RectTransform:
   m_GameObject: {fileID: 5200897695684850638}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.77019, y: 0.77019, z: 0.77019}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4078135199116418858}
@@ -1530,6 +1530,7 @@ GameObject:
   - component: {fileID: 5200897695800125631}
   - component: {fileID: 5200897695800125628}
   - component: {fileID: 5200897695800125629}
+  - component: {fileID: 7979830459719023907}
   m_Layer: 5
   m_Name: Restart
   m_TagString: Untagged
@@ -1559,7 +1560,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -6, y: 40.09999}
+  m_AnchoredPosition: {x: 10.894033, y: 23.880024}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5200897695800125630
@@ -1638,6 +1639,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 7979830459719023907}
+        m_TargetAssemblyTypeName: SFXTrigger, Assembly-CSharp
+        m_MethodName: PlayTheDefaultSFX
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!95 &5200897695800125628
 Animator:
   serializedVersion: 5
@@ -1675,6 +1688,19 @@ MonoBehaviour:
   waktutransisi: 1.2
   addscene: 0
   toscene: 0
+--- !u!114 &7979830459719023907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5200897695800125603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7169df7b9f728c7439c7d1a9975a9715, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TheSFX: button3
 --- !u!1 &5200897695819657476
 GameObject:
   m_ObjectHideFlags: 0
@@ -1747,7 +1773,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -349.1807, y: -124.72827}
+  m_AnchoredPosition: {x: -426.174, y: -164.38792}
   m_SizeDelta: {x: 68.9227, y: 76.1103}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5200897695881107033
@@ -2364,7 +2390,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -246.90634, y: -144.51651}
+  m_AnchoredPosition: {x: -323.89966, y: -184.17616}
   m_SizeDelta: {x: 267.7139, y: 99.233}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5200897696547882746
@@ -2508,7 +2534,7 @@ RectTransform:
   m_GameObject: {fileID: 5200897696634724573}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.82323, y: 0.82323, z: 0.82323}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5200897696688860033}
@@ -2638,7 +2664,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -246.90634, y: -144.51651}
+  m_AnchoredPosition: {x: -323.89966, y: -184.17616}
   m_SizeDelta: {x: 267.7139, y: 99.233}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5200897696688860035
@@ -3173,6 +3199,7 @@ GameObject:
   - component: {fileID: 5200897697469626832}
   - component: {fileID: 5200897697469626833}
   - component: {fileID: 5200897697469626834}
+  - component: {fileID: 7436172904656065587}
   m_Layer: 5
   m_Name: MainMenu
   m_TagString: Untagged
@@ -3202,7 +3229,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -6, y: -10}
+  m_AnchoredPosition: {x: 10.894033, y: -26.219967}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5200897697469626835
@@ -3281,6 +3308,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 7436172904656065587}
+        m_TargetAssemblyTypeName: SFXTrigger, Assembly-CSharp
+        m_MethodName: PlayTheDefaultSFX
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!95 &5200897697469626833
 Animator:
   serializedVersion: 5
@@ -3318,6 +3357,19 @@ MonoBehaviour:
   waktutransisi: 1.2
   addscene: 0
   toscene: 0
+--- !u!114 &7436172904656065587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5200897697469626839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7169df7b9f728c7439c7d1a9975a9715, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TheSFX: button3
 --- !u!1 &5200897697471622351
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -16,12 +17,24 @@ public class EventBaseOnLevel : MonoBehaviour
     public string PercentageValue;
     public GameObject ButtonType;
 
-    public void Awake()
+    public bool SetOnAwake = true;
+    float cooldown = 0.1f;
+
+    private void Update()
     {
-        LevelSavedLoaded = FindObjectOfType<savedata>().LevelSaved;
-        if (LevelSavedLoaded == SaveTriggerEvent)
+        if (SetOnAwake)
         {
-            StartEvent();
+            cooldown -= Time.deltaTime;
+
+            if (cooldown <= 0)
+            {
+                LevelSavedLoaded = FindObjectOfType<savedata>().LevelSaved;
+                if (LevelSavedLoaded == SaveTriggerEvent)
+                {
+                    StartEvent();
+                }
+                SetOnAwake = false;
+            }
         }
     }
 
