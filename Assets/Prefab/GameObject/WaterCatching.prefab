@@ -5609,6 +5609,7 @@ MonoBehaviour:
   CheckPoint: {fileID: 1539953941438349578}
   WaterDrop: {fileID: 2362148443695554462, guid: 95976863c5d6a4743ac23fadff7cf498,
     type: 3}
+  WateProof: 1
 --- !u!1 &1539953940978108591
 GameObject:
   m_ObjectHideFlags: 0
@@ -5751,6 +5752,7 @@ MonoBehaviour:
   CheckPoint: {fileID: 1539953941438349578}
   WaterDrop: {fileID: 2362148443695554462, guid: 95976863c5d6a4743ac23fadff7cf498,
     type: 3}
+  WateProof: 1
 --- !u!1 &1539953941143207944
 GameObject:
   m_ObjectHideFlags: 0
@@ -6110,6 +6112,7 @@ MonoBehaviour:
   CheckPoint: {fileID: 1539953941438349578}
   WaterDrop: {fileID: 2362148443695554462, guid: 95976863c5d6a4743ac23fadff7cf498,
     type: 3}
+  WateProof: 1
 --- !u!1 &1539953941286398654
 GameObject:
   m_ObjectHideFlags: 0
@@ -11439,6 +11442,7 @@ MonoBehaviour:
   CheckPoint: {fileID: 1539953941438349578}
   WaterDrop: {fileID: 2362148443695554462, guid: 95976863c5d6a4743ac23fadff7cf498,
     type: 3}
+  WateProof: 1
 --- !u!1 &2644670576494810251
 GameObject:
   m_ObjectHideFlags: 0

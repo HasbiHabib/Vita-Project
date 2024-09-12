@@ -9,6 +9,8 @@ public class GroundCheckPoint : MonoBehaviour
     public Transform CheckPoint;
     public GameObject WaterDrop;
 
+    public bool WateProof;
+
     void Start()
     {
         player = FindObjectOfType<CharacterMovement>();
@@ -18,8 +20,11 @@ public class GroundCheckPoint : MonoBehaviour
     {
         if (collision.gameObject.tag == "WaterLiquids")
         {
-            Instantiate(WaterDrop,collision.gameObject.transform.position,Quaternion.identity);
-            Destroy(collision.gameObject);
+            if (WateProof == false)
+            {
+                Instantiate(WaterDrop, collision.gameObject.transform.position, Quaternion.identity);
+                Destroy(collision.gameObject);
+            }
         }
 
         if (collision.gameObject.tag == "Player")

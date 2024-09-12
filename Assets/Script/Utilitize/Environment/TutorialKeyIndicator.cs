@@ -19,15 +19,19 @@ public class TutorialKeyIndicator : MonoBehaviour
     {
         KeyBar.SetActive(true);
         AnimationForTutorial.SetTrigger("in");
-    }
-
-    private void Start()
-    {
         if (AutoDestroy)
         {
             StartCoroutine(DestryoTimer());
         }
+    }
 
+    public void StartDelay()
+    {
+        StartCoroutine(StartDelaying());
+    }
+
+    private void Start()
+    {
         if (StartingDelay)
         {
             StartCoroutine(StartDelaying());

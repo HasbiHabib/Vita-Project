@@ -48,8 +48,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bgmSource: {fileID: 7164056776507122740}
   _audioData: {fileID: 11400000, guid: 2508c5e943f9027438403ac576d2a795, type: 2}
-  BGMDefault: 0.5
-  BGMReducerSpeed: 0.5
+  BGMDefault: 0.3
+  BGMReducerSpeed: 0.2
   SoundListOnScene: []
 --- !u!114 &7122624740944850925
 MonoBehaviour:

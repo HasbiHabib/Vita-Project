@@ -99,9 +99,9 @@ Material:
     - _TransparentZWrite: 0
     - _UseShadowThreshold: 0
     - _WobbleAmount: 1
-    - _WobbleDistance: 4.11
-    - _WobbleFrequency: 44.27
-    - _WobleSpeed: 80.6
+    - _WobbleDistance: 0.1
+    - _WobbleFrequency: 0.39
+    - _WobleSpeed: 1.6
     - _ZTestDepthEqualForOpaque: 4
     - _ZTestGBuffer: 4
     - _ZTestTransparent: 4
@@ -111,7 +111,7 @@ Material:
     - _DoubleSidedConstants: {r: 1, g: 1, b: 1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _NoiseSpeed: {r: -0.05, g: 0.01, b: 0, a: 0}
-    - _NoiseTiling: {r: 3.8, g: -0.13, b: 0, a: 0}
+    - _NoiseTiling: {r: 5.95, g: -0.05, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &7905540847467722402
 MonoBehaviour:
