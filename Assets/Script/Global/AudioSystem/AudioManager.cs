@@ -22,6 +22,7 @@ namespace Global.Audio
         private float ReducerTime;
         private bool OnReduce;
         private bool OnReduceQuickChange;
+        private bool OnReduceHalf;
         private bool OnTransitionOpening;
         private bool OnTransitionOpeningEnd;
         private string BGMSet;
@@ -142,6 +143,12 @@ namespace Global.Audio
             ReducerTime = 2;
         }
 
+        public void BGMSetHalf()
+        {
+            OnReduceHalf = true;
+            ReducerTime = 2;
+        }
+
         public void QuickBGMChanger(string clip, float Timed)
         {
             OnReduceQuickChange = true;
@@ -178,6 +185,19 @@ namespace Global.Audio
                 }
             }
 
+            if (OnReduceHalf)
+            {
+                if (_bgmSource.volume >= BGMDefault / 2)
+                {
+                    _bgmSource.volume -= BGMReducerSpeed;
+                    ReducerTime -= Time.deltaTime;
+                }
+                else
+                {
+                    OnReduceHalf = false;
+                }
+            }
+
             if (OnTransitionOpening)
             {
                 if (ReducerTime >= 0)
@@ -196,7 +216,7 @@ namespace Global.Audio
                 {
                     if (_bgmSource.volume <= BGMDefault)
                     {
-                        _bgmSource.volume += BGMReducerSpeed * 3;
+                        _bgmSource.volume -= BGMReducerSpeed;
                     }
                     ReducerTime -= Time.deltaTime;
                 }
