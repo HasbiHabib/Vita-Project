@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scene/GameScene/level3 (Sandi).unity
     guid: 17a74d92f81023c4d82ec5ad61fbe3f6
+  - enabled: 1
+    path: Assets/Scene/GameScene/level4 (sandi).unity
+    guid: d7574f5080d74584fac8d2c116c68dc3
+  - enabled: 1
+    path: Assets/Scene/GameScene/level5 (Sandi).unity
+    guid: 1e2e6e396d3e24d409853e9c9e796f18
   m_configObjects: {}

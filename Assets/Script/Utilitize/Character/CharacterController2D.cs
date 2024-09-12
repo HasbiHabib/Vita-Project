@@ -82,6 +82,8 @@ public class CharacterController2D: MonoBehaviour
                 {
                     Instantiate(dust, m_GroundCheck.position, m_GroundCheck.rotation);
                     FindObjectOfType<AudioManager>().SetCurrentSoundFXClip("land");
+                    Vector3 targetVelocity = new Vector2(0f, m_Rigidbody.velocity.y);
+                    m_Rigidbody.velocity = Vector3.SmoothDamp(m_Rigidbody.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
                     OnLandEvent.Invoke();
                     CheckIced();
                 }

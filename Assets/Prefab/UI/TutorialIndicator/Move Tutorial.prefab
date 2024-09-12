@@ -363,12 +363,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Parent: {fileID: 7846368601209866466}
   AutoDestroy: 1
-  DestroyTime: 15
+  DestroyTime: 5
   FadeOutTime: 1
   AnimationForTutorial: {fileID: 7846368601209866471}
   StartingDelay: 1
   KeyBar: {fileID: 7846368601855985681}
-  DelayTime: 4
+  DelayTime: 4.3
 --- !u!95 &7846368601209866471
 Animator:
   serializedVersion: 5

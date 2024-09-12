@@ -59,6 +59,11 @@ public class BGMSetter : MonoBehaviour
         cooldown = 0.1f;
     }
 
+    public void SetMusicHalf()
+    {
+        FindObjectOfType<AudioManager>().BGMSetHalf();
+    }
+
     public void OpeningTransition(float Timed) 
     {
         FindObjectOfType<AudioManager>().OpeningTransition(Timed);
