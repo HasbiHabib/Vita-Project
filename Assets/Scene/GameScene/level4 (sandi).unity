@@ -1664,6 +1664,41 @@ PrefabInstance:
       propertyPath: m_fontColor32.rgba
       value: 3925868543
       objectReference: {fileID: 0}
+    - target: {fileID: 1050849556567521549, guid: af6d7e02295004743a12c499609c628d,
+        type: 3}
+      propertyPath: TheEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1050849556567521549, guid: af6d7e02295004743a12c499609c628d,
+        type: 3}
+      propertyPath: TheEvent.m_PersistentCalls.m_Calls.Array.data[4].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1050849556567521549, guid: af6d7e02295004743a12c499609c628d,
+        type: 3}
+      propertyPath: TheEvent.m_PersistentCalls.m_Calls.Array.data[4].m_Target
+      value: 
+      objectReference: {fileID: 1627201114}
+    - target: {fileID: 1050849556567521549, guid: af6d7e02295004743a12c499609c628d,
+        type: 3}
+      propertyPath: TheEvent.m_PersistentCalls.m_Calls.Array.data[4].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1050849556567521549, guid: af6d7e02295004743a12c499609c628d,
+        type: 3}
+      propertyPath: TheEvent.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 1050849556567521549, guid: af6d7e02295004743a12c499609c628d,
+        type: 3}
+      propertyPath: TheEvent.m_PersistentCalls.m_Calls.Array.data[4].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1050849556567521549, guid: af6d7e02295004743a12c499609c628d,
+        type: 3}
+      propertyPath: TheEvent.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1050849556658446315, guid: af6d7e02295004743a12c499609c628d,
         type: 3}
       propertyPath: m_Pivot.x
@@ -3282,6 +3317,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0.4055938
+      objectReference: {fileID: 0}
+    - target: {fileID: 2586477080826013090, guid: c3324e1b4ec395e43848b32478f00c1e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3249035975231027169, guid: c3324e1b4ec395e43848b32478f00c1e,
         type: 3}

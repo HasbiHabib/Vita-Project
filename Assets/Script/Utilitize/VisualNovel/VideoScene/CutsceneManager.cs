@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Video;
 
 public class CutsceneManager : MonoBehaviour
@@ -9,6 +10,7 @@ public class CutsceneManager : MonoBehaviour
     public VideoPlayer ThePlayer;
     public GameObject TheBar;
     public CutsceneTrigger TheTrigered;
+    public UnityEvent EndEvent;
     public void PlayTheCutscene(VideoClip TheClip, CutsceneTrigger TheTrigger) 
     {
         TheBar.SetActive(true);
@@ -24,6 +26,7 @@ public class CutsceneManager : MonoBehaviour
         ThePlayer.Stop();
         TheTrigered.FinishVideo.Invoke();
         TheTrigered = null;
-        TheBar.SetActive(false);    
+        EndEvent.Invoke();
+        TheBar.SetActive(false);
     }
 }

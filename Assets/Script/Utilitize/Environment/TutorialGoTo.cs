@@ -12,11 +12,16 @@ public class TutorialGoTo : MonoBehaviour
 
     private bool first = true;
 
+    public bool needANimation = true;
+
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player" && first)
         {
-            Animations.SetTrigger("out");
+            if (needANimation)
+            {
+                Animations.SetTrigger("out");
+            }
             Trigger.Invoke();
             Destroy(Parent,DestroyTime);
             first = false;
