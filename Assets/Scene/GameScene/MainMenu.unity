@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3337816, g: 0.49996054, b: 0.8330078, a: 1}
+  m_IndirectSpecularColor: {r: 0.33295617, g: 0.49872112, b: 0.8330078, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3483,8 +3483,8 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 450307435}
   m_Bounds:
-    m_Center: {x: 1.300612, y: 1.5092387, z: 0}
-    m_Extent: {x: 0.6711848, y: 0.9886806, z: 0}
+    m_Center: {x: 1.300612, y: 1.509239, z: 0}
+    m_Extent: {x: 0.67118466, y: 0.9886807, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -6273,7 +6273,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &97733568
 Transform:
   m_ObjectHideFlags: 0
@@ -6519,6 +6519,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &101224344 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1539953941757722045, guid: 65d425b688b6d1642aa661f1d1b8b3e0,
+    type: 3}
+  m_PrefabInstance: {fileID: 920955609}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &101318138
 GameObject:
   m_ObjectHideFlags: 0
@@ -23469,6 +23475,42 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 97733567}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 101224344}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 713779022}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   TheTree: {fileID: 790591961}
   ThePercentage: {fileID: 437984033}
   PercentageValue: 100%
@@ -28872,7 +28914,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 450307434}
-  m_LocalRotation: {x: 0, y: 0, z: -0.9955615, w: -0.09411416}
+  m_LocalRotation: {x: 0, y: 0, z: -0.9955615, w: -0.09411403}
   m_LocalPosition: {x: 1.9860646, y: 1.8406491, z: 0}
   m_LocalScale: {x: 1.0555277, y: 0.91586137, z: 1}
   m_ConstrainProportionsScale: 0
@@ -34284,7 +34326,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 513463853}
-  m_LocalRotation: {x: 0, y: 0, z: -0.014729496, w: 0.9998916}
+  m_LocalRotation: {x: 0, y: 0, z: -0.014730864, w: 0.9998915}
   m_LocalPosition: {x: 0.8522848, y: 0.0478341, z: 0}
   m_LocalScale: {x: 0.95892173, y: 1.0622118, z: 1}
   m_ConstrainProportionsScale: 0
@@ -35535,7 +35577,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 531720056}
-  m_LocalRotation: {x: -0, y: -0, z: -0.54824907, w: 0.8363151}
+  m_LocalRotation: {x: -0, y: -0, z: -0.54824823, w: 0.83631575}
   m_LocalPosition: {x: 1.62, y: -0.09, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -41510,7 +41552,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 644008888}
         m_TargetAssemblyTypeName: BGMSetter, Assembly-CSharp
-        m_MethodName: SetMusicOff
+        m_MethodName: SetMusicHalf
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -46660,7 +46702,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &713779023
 Transform:
   m_ObjectHideFlags: 0
@@ -47699,8 +47741,8 @@ MonoBehaviour:
   - {fileID: 1228886522}
   - {fileID: 1752942343}
   m_Bounds:
-    m_Center: {x: 2.7434175, y: 2.5639477, z: 0}
-    m_Extent: {x: 0.88669366, y: 1.1202863, z: 0}
+    m_Center: {x: 2.7434177, y: 2.563948, z: 0}
+    m_Extent: {x: 0.8866937, y: 1.1202862, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -51837,8 +51879,8 @@ MonoBehaviour:
   - {fileID: 1780351779}
   - {fileID: 513463854}
   m_Bounds:
-    m_Center: {x: -1.6659033, y: 1.9666113, z: 0}
-    m_Extent: {x: 0.9593366, y: 0.9448434, z: 0}
+    m_Center: {x: -1.6658964, y: 1.9666135, z: 0}
+    m_Extent: {x: 0.9593386, y: 0.94484353, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -57160,7 +57202,7 @@ PrefabInstance:
     - target: {fileID: 1539953941757722045, guid: 65d425b688b6d1642aa661f1d1b8b3e0,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3374758510346195606, guid: 65d425b688b6d1642aa661f1d1b8b3e0,
         type: 3}
@@ -65551,7 +65593,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1085278676}
-  m_LocalRotation: {x: 0, y: 0, z: -0.9720855, w: 0.23462707}
+  m_LocalRotation: {x: 0, y: 0, z: -0.9720849, w: 0.23462948}
   m_LocalPosition: {x: 1.8553677, y: -0.4551878, z: 0}
   m_LocalScale: {x: 1.0888523, y: 0.87416595, z: 1}
   m_ConstrainProportionsScale: 0
@@ -78588,7 +78630,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1228886521}
-  m_LocalRotation: {x: 0, y: 0, z: 0.32914054, w: 0.944281}
+  m_LocalRotation: {x: 0, y: 0, z: 0.32914072, w: 0.9442809}
   m_LocalPosition: {x: 0.9223274, y: 0.00000015963059, z: 0}
   m_LocalScale: {x: 0.99999964, y: 0.99999964, z: 1}
   m_ConstrainProportionsScale: 0
@@ -83208,8 +83250,8 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 1085278677}
   m_Bounds:
-    m_Center: {x: -6.2123737, y: -1.7148504, z: 0}
-    m_Extent: {x: 0.6749356, y: 1.0030434, z: 0}
+    m_Center: {x: -6.212369, y: -1.7148496, z: 0}
+    m_Extent: {x: 0.67493796, y: 1.003043, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -104793,7 +104835,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1752942342}
-  m_LocalRotation: {x: 0, y: 0, z: 0.17240861, w: 0.9850256}
+  m_LocalRotation: {x: 0, y: 0, z: 0.17240839, w: 0.98502564}
   m_LocalPosition: {x: 0.85885715, y: -0.09529036, z: 0}
   m_LocalScale: {x: 0.9677603, y: 1.0526319, z: 1}
   m_ConstrainProportionsScale: 0
@@ -106414,7 +106456,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1780351778}
-  m_LocalRotation: {x: 0, y: 0, z: 0.45965475, w: 0.88809776}
+  m_LocalRotation: {x: 0, y: 0, z: 0.4596528, w: 0.8880987}
   m_LocalPosition: {x: 0.8822789, y: 0.00000006401273, z: 0}
   m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1}
   m_ConstrainProportionsScale: 0
@@ -108942,7 +108984,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1820916115
 Transform:
   m_ObjectHideFlags: 0
@@ -136723,7 +136765,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2134128642}
-  m_LocalRotation: {x: -0, y: -0, z: -0.2907131, w: 0.95681036}
+  m_LocalRotation: {x: -0, y: -0, z: -0.29071322, w: 0.9568103}
   m_LocalPosition: {x: 2.1, y: -0.09, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
