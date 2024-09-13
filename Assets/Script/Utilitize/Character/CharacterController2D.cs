@@ -17,7 +17,6 @@ public class CharacterController2D: MonoBehaviour
     public GameObject CharacterVisual;
 
 
-    private bool firstland = true;
     public float IceSmooth;
     const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
     public bool m_Grounded;            // Whether or not the player is grounded.
@@ -54,11 +53,7 @@ public class CharacterController2D: MonoBehaviour
     {
         if (m_Grounded == true)
         {
-            m_midair = false;
-            if (firstland == true)
-            {
-                firstland = false;
-            }
+            m_midair = false; 
         }
         else
         {
@@ -82,15 +77,14 @@ public class CharacterController2D: MonoBehaviour
                 {
                     Instantiate(dust, m_GroundCheck.position, m_GroundCheck.rotation);
                     FindObjectOfType<AudioManager>().SetCurrentSoundFXClip("land");
+                    CheckIced();
                     Vector3 targetVelocity = new Vector2(0f, m_Rigidbody.velocity.y);
                     m_Rigidbody.velocity = Vector3.SmoothDamp(m_Rigidbody.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
-                    OnLandEvent.Invoke();
-                    CheckIced();
+                    OnLandEvent.Invoke(); 
                 }
                 if (onDash == true)
                 {
                     onDash = false;
-
                 }
             }
         }
@@ -162,6 +156,7 @@ public class CharacterController2D: MonoBehaviour
             m_Grounded = false;
             m_Rigidbody.AddForce(new Vector2(0f, JumpForce));
             OnJumpEvent.Invoke();
+            m_MovementSmoothing = 0;
             //Instantiate(dust, m_GroundCheck.position, m_GroundCheck.rotation);
         }
         if (Oncharge)

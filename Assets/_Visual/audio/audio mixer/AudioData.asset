@@ -87,7 +87,7 @@ MonoBehaviour:
   - SoundName: dead
     Clip: {fileID: 8300000, guid: 632fc673e7044fc40ace89f310341482, type: 3}
     Output: {fileID: 24300002, guid: 9a7070e95b37aee4991563d85bbf3ad3, type: 2}
-    Volume: 0.5
+    Volume: 0.3
     pitch: 1
     isLoop: 0
   - SoundName: fireblast

@@ -1342,7 +1342,7 @@ MonoBehaviour:
     invertFade: 0
     distanceFadeStart: 1
     distanceFadeEnd: 1000
-    textureOffset: {x: -0, y: -0, z: -0}
+    textureOffset: {x: 0, y: 0, z: 0}
     falloffMode: 0
   m_Version: 2
 --- !u!1 &462851593
@@ -10517,7 +10517,7 @@ MonoBehaviour:
     invertFade: 0
     distanceFadeStart: 1
     distanceFadeEnd: 1000
-    textureOffset: {x: -0, y: -0, z: -0}
+    textureOffset: {x: 0, y: 0, z: 0}
     falloffMode: 0
   m_Version: 2
 --- !u!1 &1599017927
