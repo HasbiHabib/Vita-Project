@@ -61,6 +61,12 @@ public class savedata : MonoBehaviour
         SAVEGAME();
     }
 
+    public void ResetLevel()
+    {
+        LevelSaved = 0;
+        SAVEGAME();
+    }
+
 
     public void SAVEGAME()
     {

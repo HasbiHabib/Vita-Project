@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Global.Option
 {
@@ -17,6 +18,8 @@ namespace Global.Option
         public bool CanTriigger = true;
 
         public Animator TheAnimationBar;
+
+        public UnityEvent CloseEvent;
 
         private void Start()
         {
@@ -53,6 +56,7 @@ namespace Global.Option
         }
         public void closeall2()
         {
+            CloseEvent.Invoke();
             optionOn = false;
             CanTriigger = false;
             FindObjectOfType<gamemaster>().HideCursor();
